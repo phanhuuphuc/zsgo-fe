@@ -1,0 +1,7 @@
+.breadcrumb-not-active {
+    color: #49bdd7;
+}
+.breadcrumb-active {
+    color: aqua;
+    font-weight: 800;
+}
