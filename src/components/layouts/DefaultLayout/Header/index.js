@@ -5,8 +5,11 @@ import Logo from "@/assets/images/logo2.png";
 import { Link, generatePath } from "react-router-dom";
 import { HOME_PAGE_PATH, GAME_DETAILS_PATH, HELP_PAGE_PATH } from "@/constants/path";
 import LoginModal from "@/components/partials/AuthModals/AuthModalContainer";
+import { useDispatch, useSelector } from "react-redux";
+import { Button } from "bootstrap";
 // const cx = classNames.bind(styles);
 const Header = () => {
+  const { isLoggedIn } = useSelector(state => state.auth);
   return (
     <React.Fragment>
       <header className="header">
@@ -111,7 +114,8 @@ const Header = () => {
                   >
                     <span className="navbar-toggler-icon"></span>
                   </button>
-                  <div
+                 
+                    <div
                     className="collapse navbar-collapse fixed-height"
                     id="main_menu"
                   >
@@ -250,6 +254,7 @@ const Header = () => {
                             Contact
                           </a>
                         </li>
+                        {!isLoggedIn && (
                         <li>
                           <a
                             href="#"
@@ -261,9 +266,31 @@ const Header = () => {
                             Đăng ký
                           </a>
                         </li>
+                  )}
+{isLoggedIn && (
+ <li>
+    <Link
+    onClick={() => {console.log('LOGOUT OK');}}
+    className="mybtn1">
+  Đăng xuất
+    </Link>
+ </li>
+                        // <li>
+                        //   <a
+                        //     href="#"
+                        //     className="mybtn1"
+                        //     data-toggle="modal"
+                        //     data-target="#signin"
+                        //   >
+                        //     {" "}
+                        //     Đăng xuất
+                        //   </a>
+                        // </li>
+                  )}
                       </ul>
                     </div>
                   </div>
+                  
                 </nav>
               </div>
             </div>

@@ -57,7 +57,7 @@ const LoginModalsComponents = (props) => {
                       <h4 className="title">Welcome to ZSGo</h4>
                     </div>
                     <div className="form-area">
-                      <form action="#" method="POST">
+                      {/* <form action="#" method="POST"> */}
                         <div className="form-group">
                           <input
                             type="email"
@@ -90,7 +90,7 @@ const LoginModalsComponents = (props) => {
                             Đăng nhập
                           </button>
                         </div>
-                      </form>
+                      {/* </form> */}
                     </div>
                   </div>
                   <div
