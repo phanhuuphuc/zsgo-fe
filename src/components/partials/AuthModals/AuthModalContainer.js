@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch, useSelector } from "react-redux";
 import { Navigate, useNavigate  } from 'react-router-dom';
 import LoginModalComponents from './AuthModalsComponents';
+import {  toast } from 'react-toastify';
 import { login } from "@/redux/actions/auth";
 
 const LoginModalContainer = () => {
@@ -18,40 +19,42 @@ const LoginModalContainer = () => {
     comfirm_password: ""
   });
 
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
+
   const [loading, setLoading] = useState(false);
-
+  const [closeModal, setCloseModal] = useState(false);
   const { isLoggedIn } = useSelector(state => state.auth);
-  const { message } = useSelector(state => state.message);
-
+  // const { message } = useSelector(state => state.message);
+  console.log(isLoggedIn)
+  // console.log(message)
+  
   const dispatch = useDispatch();
   const handleSubmitLogin = (e) => {
-    e.preventDefault();
-
-    // setLoading(true);
-
-    // form.current.validateAll();
-
-    // if (checkBtn.current.context._errors.length === 0) {
+    
       dispatch(login(loginForm.email, loginForm.password))
         .then(() => {
           // navigate("/help");
-          window.location.reload();
+          
+          setCloseModal(true)
         })
         .catch(() => {
-          setLoading(false);
+          // setLoading(false);
         });
     // } else {
     //   setLoading(false);
     // }
-
-    // console.log('Login');
   };
 
   const handleSubmitRegister = (e) => {
     e.preventDefault();
     console.log(registerForm);
+  };
+
+  const handleCloseModal = () => {
+    setCloseModal(true);
+  };
+
+  const handleLogOut = () => {
+    console.log('Log out');
   };
 
   return (
@@ -61,6 +64,8 @@ const LoginModalContainer = () => {
       loginForm={loginForm}
       setRegisterForm={setRegisterForm}
       registerForm={registerForm}
+      handleLogOut={handleLogOut}
+      closeModal={closeModal}
       handleSubmitRegister={handleSubmitRegister}
     />
   );

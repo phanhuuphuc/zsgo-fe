@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "./Header.module.scss";
 import Logo from "@/assets/images/logo2.png";
 import { Link, generatePath } from "react-router-dom";
@@ -7,9 +7,15 @@ import { HOME_PAGE_PATH, GAME_DETAILS_PATH, HELP_PAGE_PATH } from "@/constants/p
 import LoginModal from "@/components/partials/AuthModals/AuthModalContainer";
 import { useDispatch, useSelector } from "react-redux";
 import { Button } from "bootstrap";
+import EventBus from "@/common/EventBus";
+import { logout } from "@/redux/actions/auth";
 // const cx = classNames.bind(styles);
 const Header = () => {
   const { isLoggedIn } = useSelector(state => state.auth);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    console.log(localStorage.getItem("user"))
+  }, [localStorage.getItem("user")]);
   return (
     <React.Fragment>
       <header className="header">
@@ -29,29 +35,29 @@ const Header = () => {
                     </ul>
                     <ul className="top-social-links">
                       <li>
-                        <a href="#">
+                        <Link href="#">
                           <i className="fab fa-facebook-f"></i>
-                        </a>
+                        </Link>
                       </li>
                       <li>
-                        <a href="#">
+                        <Link href="#">
                           <i className="fab fa-twitter"></i>
-                        </a>
+                        </Link>
                       </li>
                       <li>
-                        <a href="#">
+                        <Link href="#">
                           <i className="fab fa-pinterest-p"></i>
-                        </a>
+                        </Link>
                       </li>
                       <li>
-                        <a href="#">
+                        <Link href="#">
                           <i className="fab fa-linkedin-in"></i>
-                        </a>
+                        </Link>
                       </li>
                       <li>
-                        <a href="#">
+                        <Link to="/#">
                           <i className="fab fa-instagram"></i>
-                        </a>
+                        </Link>
                       </li>
                     </ul>
                   </div>
@@ -59,11 +65,13 @@ const Header = () => {
                     <ul className="right-list">
                       <li>
                         <div className="language-selector">
-                          <select name="language" className="language">
-                            <option value="1">EN</option>
-                            <option value="2">IN</option>
-                            <option value="3">BN</option>
-                          </select>
+                        <div
+                          className="message"
+                          data-toggle="modal"
+                          data-target="#usermessage"
+                        >
+                          <i className="far fa-envelope"></i>
+                        </div>
                         </div>
                       </li>
                       <li>
@@ -75,15 +83,17 @@ const Header = () => {
                           <i className="far fa-bell"></i>
                         </div>
                       </li>
+                      {isLoggedIn && (
                       <li>
-                        <div
+                        
+                        <button
                           className="message"
-                          data-toggle="modal"
-                          data-target="#usermessage"
+                          onClick={() => dispatch(logout())}
                         >
-                          <i className="far fa-envelope"></i>
-                        </div>
+                          <i className="fas fa-sign-out-alt"></i>
+                        </button>
                       </li>
+                      )}
                     </ul>
                   </div>
                 </div>
@@ -96,13 +106,13 @@ const Header = () => {
             <div className="row">
               <div className="col-lg-12">
                 <nav className="navbar navbar-expand-lg navbar-light">
-                  <a className="navbar-brand d-lg-none" href="index.html">
+                  <Link className="navbar-brand d-lg-none" to="/index.html">
                     <img
                       className="l2"
                       src={Logo}
                       alt=""
                     />
-                  </a>
+                  </Link>
                   <button
                     className="navbar-toggler"
                     type="button"
@@ -114,8 +124,8 @@ const Header = () => {
                   >
                     <span className="navbar-toggler-icon"></span>
                   </button>
-                 
-                    <div
+
+                  <div
                     className="collapse navbar-collapse fixed-height"
                     id="main_menu"
                   >
@@ -131,72 +141,72 @@ const Header = () => {
 
                         </li>
                         <li className="nav-item">
-                          <a className="nav-link" href="raffles.html">
+                          <Link className="nav-link" to="/raffles.html">
                             Car Rental
-                          </a>
+                          </Link>
                         </li>
                         <li className="nav-item">
-                          <a className="nav-link" href="games.html">
+                          <Link className="nav-link" to="/games.html">
                             Games
-                          </a>
+                          </Link>
                         </li>
                         <li className="nav-item">
-                          <a className="nav-link" href="tournaments.html">
+                          <Link className="nav-link" to="/tournaments.html">
                             Tournaments
-                          </a>
+                          </Link>
                         </li>
                       </ul>
-                      <a
+                      <Link
                         className="navbar-brand  d-none d-lg-block"
-                        href="index.html"
+                        to="/index.html"
                       >
                         <img
                           className="l2"
                           src={Logo}
                           alt=""
                         />
-                      </a>
+                      </Link>
                       <ul className="navbar-nav ml-auto">
                         <li className="nav-item dropdown">
-                          <a
+                          <Link
                             className="nav-link dropdown-toggle"
-                            href="#"
+                            to="/#"
                             role="button"
                             data-toggle="dropdown"
                             aria-haspopup="true"
                             aria-expanded="false"
                           >
                             Pages
-                          </a>
+                          </Link>
                           <ul className="dropdown-menu">
                             <li>
-                              <a className="dropdown-item" href="about.html">
+                              <Link className="dropdown-item" to="/about.html">
                                 {" "}
                                 <i className="fa fa-angle-double-right"></i>About
-                              </a>
+                              </Link>
                             </li>
                             <li>
-                              <a className="dropdown-item" href="bonuse-page.html">
+                              <Link className="dropdown-item" to="/bonuse-page.html">
                                 {" "}
                                 <i className="fa fa-angle-double-right"></i>Bonuse
-                              </a>
+                              </Link>
                             </li>
                             <li>
-                              <a className="dropdown-item" href="ticket-page.html">
+                              <Link className="dropdown-item" to="/ticket-page.html">
                                 {" "}
                                 <i className="fa fa-angle-double-right"></i>Ticket
                                 Page
-                              </a>
+                              </Link>
                             </li>
                             <li>
-                              <a
+                              <Link
                                 className="dropdown-item"
-                                href="raffles-details.html"
+                                to="/raffles-details.html"
                               >
                                 {" "}
                                 <i className="fa fa-angle-double-right"></i>Raffles
                                 Details
-                              </a>
+                              </Link>
                             </li>
                             <li>
                               <Link
@@ -209,31 +219,31 @@ const Header = () => {
                               </Link>
                             </li>
                             <li>
-                              <a className="dropdown-item" href="tournaments2.html">
+                              <Link className="dropdown-item" to="/tournaments2.html">
                                 {" "}
                                 <i className="fa fa-angle-double-right"></i>
                                 Tournaments Details
-                              </a>
+                              </Link>
                             </li>
                             <li>
-                              <a
+                              <Link
                                 className="dropdown-item"
-                                href="gamer-profile1.html"
+                                to="/gamer-profile1.html"
                               >
                                 {" "}
                                 <i className="fa fa-angle-double-right"></i>Gamer
                                 Profile Public
-                              </a>
+                              </Link>
                             </li>
                             <li>
-                              <a
+                              <Link
                                 className="dropdown-item"
-                                href="gamer-profile6.html"
+                                to="/gamer-profile6.html"
                               >
                                 {" "}
                                 <i className="fa fa-angle-double-right"></i>Gamer
                                 Problie Private{" "}
-                              </a>
+                              </Link>
                             </li>
                             <li>
                               <Link className="dropdown-item" to={HELP_PAGE_PATH}>
@@ -242,55 +252,55 @@ const Header = () => {
                               </Link>
                             </li>
                             <li>
-                              <a className="dropdown-item" href="404.html">
+                              <Link className="dropdown-item" to="/404.html">
                                 {" "}
                                 <i className="fa fa-angle-double-right"></i>404
-                              </a>
+                              </Link>
                             </li>
                           </ul>
                         </li>
                         <li className="nav-item">
-                          <a className="nav-link" href="contact.html">
+                          <Link className="nav-link" to="/contact.html">
                             Contact
-                          </a>
+                          </Link>
                         </li>
                         {!isLoggedIn && (
-                        <li>
-                          <a
-                            href="#"
-                            className="mybtn1"
-                            data-toggle="modal"
-                            data-target="#signin"
-                          >
-                            {" "}
-                            Đăng ký
-                          </a>
-                        </li>
-                  )}
-{isLoggedIn && (
- <li>
-    <Link
-    onClick={() => {console.log('LOGOUT OK');}}
-    className="mybtn1">
-  Đăng xuất
-    </Link>
- </li>
-                        // <li>
-                        //   <a
-                        //     href="#"
-                        //     className="mybtn1"
-                        //     data-toggle="modal"
-                        //     data-target="#signin"
-                        //   >
-                        //     {" "}
-                        //     Đăng xuất
-                        //   </a>
-                        // </li>
-                  )}
+                          <li>
+                            <Link
+                              to="/#"
+                              className="mybtn1"
+                              data-toggle="modal"
+                              data-target="#signin"
+                            >
+                              {" "}
+                              Đăng ký
+                            </Link>
+                          </li>
+                        )}
+                        {isLoggedIn && (
+                          <li>
+                            <Link
+                              onClick={() => { console.log('LOGOUT OK'); }}
+                              className="mybtn1">
+                              Profiles
+                            </Link>
+                          </li>
+                          // <li>
+                          //   <Link
+                          //     to="/#"
+                          //     className="mybtn1"
+                          //     data-toggle="modal"
+                          //     data-target="#signin"
+                          //   >
+                          //     {" "}
+                          //     Đăng xuất
+                          //   </Link>
+                          // </li>
+                        )}
                       </ul>
                     </div>
                   </div>
-                  
+
                 </nav>
               </div>
             </div>

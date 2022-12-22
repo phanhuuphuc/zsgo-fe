@@ -6,6 +6,7 @@ const LoginModalsComponents = (props) => {
   const loginForm = props.loginForm;
   const setRegisterForm = props.setRegisterForm;
   const registerForm = props.registerForm;
+  const closeModal = props.closeModal;
     return ( 
         <div className="modal-dialog modal-dialog-centered " role="document">
             <div className="modal-content">

@@ -6,6 +6,7 @@ import {
   LOGOUT,
 } from "@/redux/actions/types";
 
+
 const user = JSON.parse(localStorage.getItem("user"));
 
 const initialState = user
@@ -14,7 +15,6 @@ const initialState = user
 
 export default function (state = initialState, action) {
   const { type, payload } = action;
-
   switch (type) {
     case REGISTER_SUCCESS:
       return {
@@ -37,6 +37,7 @@ export default function (state = initialState, action) {
         ...state,
         isLoggedIn: false,
         user: null,
+
       };
     case LOGOUT:
       return {
