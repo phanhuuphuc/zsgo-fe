@@ -30,7 +30,7 @@ const LoginModalContainer = () => {
   const dispatch = useDispatch();
   const handleSubmitLogin = (e) => {
     
-      dispatch(login(loginForm.email, loginForm.password))
+     dispatch(login(loginForm.email, loginForm.password))
         .then(() => {
           // navigate("/help");
           

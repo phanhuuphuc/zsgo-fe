@@ -1,13 +1,15 @@
-import classNames from "classnames";
 import React, { useEffect } from "react";
 import styles from "./Header.module.scss";
 import Logo from "@/assets/images/logo2.png";
-import { Link, generatePath } from "react-router-dom";
-import { HOME_PAGE_PATH, GAME_DETAILS_PATH, HELP_PAGE_PATH } from "@/constants/path";
+import { Link } from "react-router-dom";
+import {
+  HOME_PAGE_PATH,
+  GAME_DETAILS_PAGE_PATH,
+  HELP_PAGE_PATH,
+  GAMER_PROFILE_PAGE_PATH
+} from "@/components/constants/path";
 import LoginModal from "@/components/partials/AuthModals/AuthModalContainer";
 import { useDispatch, useSelector } from "react-redux";
-import { Button } from "bootstrap";
-import EventBus from "@/common/EventBus";
 import { logout } from "@/redux/actions/auth";
 // const cx = classNames.bind(styles);
 const Header = () => {
@@ -65,13 +67,13 @@ const Header = () => {
                     <ul className="right-list">
                       <li>
                         <div className="language-selector">
-                        <div
-                          className="message"
-                          data-toggle="modal"
-                          data-target="#usermessage"
-                        >
-                          <i className="far fa-envelope"></i>
-                        </div>
+                          <div
+                            className="message"
+                            data-toggle="modal"
+                            data-target="#usermessage"
+                          >
+                            <i className="far fa-envelope"></i>
+                          </div>
                         </div>
                       </li>
                       <li>
@@ -84,15 +86,15 @@ const Header = () => {
                         </div>
                       </li>
                       {isLoggedIn && (
-                      <li>
-                        
-                        <button
-                          className="message"
-                          onClick={() => dispatch(logout())}
-                        >
-                          <i className="fas fa-sign-out-alt"></i>
-                        </button>
-                      </li>
+                        <li>
+
+                          <button
+                            className="message"
+                            onClick={() => dispatch(logout())}
+                          >
+                            <i className="fas fa-sign-out-alt"></i>
+                          </button>
+                        </li>
                       )}
                     </ul>
                   </div>
@@ -134,7 +136,7 @@ const Header = () => {
                         <li className="nav-item dropdown">
                           <Link
                             className="nav-link active dropdown-toggle"
-                            to={HOME_PAGE_PATH}
+                            to={HOME_PAGE_PATH.path}
                           >
                             Home
                           </Link>
@@ -211,7 +213,7 @@ const Header = () => {
                             <li>
                               <Link
                                 className="dropdown-item"
-                                to={GAME_DETAILS_PATH}
+                                to={GAME_DETAILS_PAGE_PATH.path}
                               >
                                 {" "}
                                 <i className="fa fa-angle-double-right"></i>Games
@@ -246,7 +248,7 @@ const Header = () => {
                               </Link>
                             </li>
                             <li>
-                              <Link className="dropdown-item" to={HELP_PAGE_PATH}>
+                              <Link className="dropdown-item" to={HELP_PAGE_PATH.path}>
                                 {" "}
                                 <i className="fa fa-angle-double-right"></i>Help
                               </Link>
@@ -280,7 +282,7 @@ const Header = () => {
                         {isLoggedIn && (
                           <li>
                             <Link
-                              onClick={() => { console.log('LOGOUT OK'); }}
+                              to={GAMER_PROFILE_PAGE_PATH.path}
                               className="mybtn1">
                               Profiles
                             </Link>

@@ -1,9 +1,7 @@
 import React from "react";
-import Breadcrumbs from "@/components/layouts/Breadcrumbs";
 const HelpComponents = () => {
   return (
     <React.Fragment>
-      <Breadcrumbs />
       <section className="help-section">
         <div className="container">
           <div className="row">
