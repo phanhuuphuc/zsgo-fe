@@ -1,24 +1,23 @@
 import React from "react";
-import Breadcrumbs from "@/components/layouts/Breadcrumbs";
+import { Link } from "react-router-dom";
 const GameDetailsComponents = () => {
   return (
     <React.Fragment>
-    <Breadcrumbs />
   <section className="games-details-top-bar">
 		<div className="container">
 			<div className="row">
 				<div className="col-lg-12">
 					<div className="games-d-t-b-i">
 						<div className="left-area">
-							<a className="modal-link" href="#" data-toggle="modal" data-target="#rankModal">
+							<Link className="modal-link" href="#" data-toggle="modal" data-target="#rankModal">
 								<i className="far fa-chart-bar"></i>
 								<span>Player Rank</span>
-							</a>
-							<a className="modal-link" href="#" data-toggle="modal" data-target="#faqModal">
+							</Link>
+							<Link className="modal-link" href="#" data-toggle="modal" data-target="#faqModal">
 								<i className="fas fa-question"></i>
 								<span>FAQS</span>
-							</a>
-							<a href="#" className="mybtn2">How to Play</a>
+							</Link>
+							<Link href="#" className="mybtn2">How to Play</Link>
 						</div>
 						<div className="right-area">
 							<div className="player-wrapper">
@@ -27,24 +26,24 @@ const GameDetailsComponents = () => {
 							</div>
 							<ul>
 								<li>
-									<a href="#">
+									<Link href="#">
 										<img src="assets/images/player/sm1.png" alt=""/>
-									</a>
+									</Link>
 								</li>
 								<li>
-									<a href="#">
+									<Link href="#">
 										<img src="assets/images/player/sm2.png" alt=""/>
-									</a>
+									</Link>
 								</li>
 								<li>
-									<a href="#">
+									<Link href="#">
 										<img src="assets/images/player/sm3.png" alt=""/>
-									</a>
+									</Link>
 								</li>
 								<li>
-									<a href="#">
+									<Link href="#">
 										<img src="assets/images/player/sm4.png" alt=""/>
-									</a>
+									</Link>
 								</li>
 								<li>
 									<span>
@@ -68,7 +67,7 @@ const GameDetailsComponents = () => {
 								<div className="img">
 									<img src="assets/images/game-play/2.png" alt=""/>
 								</div>
-								<a href="#" className="mybtn2">Play</a>
+								<Link href="#" className="mybtn2">Play</Link>
 							</div>
 							<div className="lr-content">
 								<h3>Booyah!</h3>
@@ -104,7 +103,7 @@ const GameDetailsComponents = () => {
 										<div className="numb"><sup>$</sup>3.6</div>
 									</div>
 								</div>
-								<a href="#" className="mybtn2">Play</a>
+								<Link href="#" className="mybtn2">Play</Link>
 							</div>
 						</div>
 					</div>
