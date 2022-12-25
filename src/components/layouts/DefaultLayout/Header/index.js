@@ -6,17 +6,17 @@ import {
   HOME_PAGE_PATH,
   GAME_DETAILS_PAGE_PATH,
   HELP_PAGE_PATH,
-  GAMER_PROFILE_PAGE_PATH
+  GAMER_PROFILE_PAGE_PATH,
 } from "@/components/constants/path";
 import LoginModal from "@/components/partials/AuthModals/AuthModalContainer";
 import { useDispatch, useSelector } from "react-redux";
 import { logout } from "@/redux/actions/auth";
 // const cx = classNames.bind(styles);
 const Header = () => {
-  const { isLoggedIn } = useSelector(state => state.auth);
+  const { isLoggedIn } = useSelector((state) => state.auth);
   const dispatch = useDispatch();
   useEffect(() => {
-    console.log(localStorage.getItem("user"))
+    console.log(localStorage.getItem("user"));
   }, [localStorage.getItem("user")]);
   return (
     <React.Fragment>
@@ -87,7 +87,6 @@ const Header = () => {
                       </li>
                       {isLoggedIn && (
                         <li>
-
                           <button
                             className="message"
                             onClick={() => dispatch(logout())}
@@ -109,11 +108,7 @@ const Header = () => {
               <div className="col-lg-12">
                 <nav className="navbar navbar-expand-lg navbar-light">
                   <Link className="navbar-brand d-lg-none" to="/index.html">
-                    <img
-                      className="l2"
-                      src={Logo}
-                      alt=""
-                    />
+                    <img className="l2" src={Logo} alt="" />
                   </Link>
                   <button
                     className="navbar-toggler"
@@ -140,7 +135,6 @@ const Header = () => {
                           >
                             Home
                           </Link>
-
                         </li>
                         <li className="nav-item">
                           <Link className="nav-link" to="/raffles.html">
@@ -162,11 +156,7 @@ const Header = () => {
                         className="navbar-brand  d-none d-lg-block"
                         to="/index.html"
                       >
-                        <img
-                          className="l2"
-                          src={Logo}
-                          alt=""
-                        />
+                        <img className="l2" src={Logo} alt="" />
                       </Link>
                       <ul className="navbar-nav ml-auto">
                         <li className="nav-item dropdown">
@@ -184,20 +174,28 @@ const Header = () => {
                             <li>
                               <Link className="dropdown-item" to="/about.html">
                                 {" "}
-                                <i className="fa fa-angle-double-right"></i>About
+                                <i className="fa fa-angle-double-right"></i>
+                                About
                               </Link>
                             </li>
                             <li>
-                              <Link className="dropdown-item" to="/bonuse-page.html">
+                              <Link
+                                className="dropdown-item"
+                                to="/bonuse-page.html"
+                              >
                                 {" "}
-                                <i className="fa fa-angle-double-right"></i>Bonuse
+                                <i className="fa fa-angle-double-right"></i>
+                                Bonuse
                               </Link>
                             </li>
                             <li>
-                              <Link className="dropdown-item" to="/ticket-page.html">
+                              <Link
+                                className="dropdown-item"
+                                to="/ticket-page.html"
+                              >
                                 {" "}
-                                <i className="fa fa-angle-double-right"></i>Ticket
-                                Page
+                                <i className="fa fa-angle-double-right"></i>
+                                Ticket Page
                               </Link>
                             </li>
                             <li>
@@ -206,8 +204,8 @@ const Header = () => {
                                 to="/raffles-details.html"
                               >
                                 {" "}
-                                <i className="fa fa-angle-double-right"></i>Raffles
-                                Details
+                                <i className="fa fa-angle-double-right"></i>
+                                Raffles Details
                               </Link>
                             </li>
                             <li>
@@ -216,12 +214,15 @@ const Header = () => {
                                 to={GAME_DETAILS_PAGE_PATH.path}
                               >
                                 {" "}
-                                <i className="fa fa-angle-double-right"></i>Games
-                                Details
+                                <i className="fa fa-angle-double-right"></i>
+                                Games Details
                               </Link>
                             </li>
                             <li>
-                              <Link className="dropdown-item" to="/tournaments2.html">
+                              <Link
+                                className="dropdown-item"
+                                to="/tournaments2.html"
+                              >
                                 {" "}
                                 <i className="fa fa-angle-double-right"></i>
                                 Tournaments Details
@@ -233,8 +234,8 @@ const Header = () => {
                                 to="/gamer-profile1.html"
                               >
                                 {" "}
-                                <i className="fa fa-angle-double-right"></i>Gamer
-                                Profile Public
+                                <i className="fa fa-angle-double-right"></i>
+                                Gamer Profile Public
                               </Link>
                             </li>
                             <li>
@@ -243,12 +244,15 @@ const Header = () => {
                                 to="/gamer-profile6.html"
                               >
                                 {" "}
-                                <i className="fa fa-angle-double-right"></i>Gamer
-                                Problie Private{" "}
+                                <i className="fa fa-angle-double-right"></i>
+                                Gamer Problie Private{" "}
                               </Link>
                             </li>
                             <li>
-                              <Link className="dropdown-item" to={HELP_PAGE_PATH.path}>
+                              <Link
+                                className="dropdown-item"
+                                to={HELP_PAGE_PATH.path}
+                              >
                                 {" "}
                                 <i className="fa fa-angle-double-right"></i>Help
                               </Link>
@@ -283,7 +287,8 @@ const Header = () => {
                           <li>
                             <Link
                               to={GAMER_PROFILE_PAGE_PATH.path}
-                              className="mybtn1">
+                              className="mybtn1"
+                            >
                               Profiles
                             </Link>
                           </li>
@@ -302,7 +307,6 @@ const Header = () => {
                       </ul>
                     </div>
                   </div>
-
                 </nav>
               </div>
             </div>
@@ -321,6 +325,6 @@ const Header = () => {
       </div>
     </React.Fragment>
   );
-}
+};
 
 export default Header;

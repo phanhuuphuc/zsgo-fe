@@ -17,6 +17,7 @@ const login = (email, password) => {
       password,
     })
     .then((response) => {
+      console.log(response)
       if (response.data.accessToken) {
         toast.success("🦄 Login successfully!");
         localStorage.setItem("user", JSON.stringify(response.data));
@@ -24,6 +25,7 @@ const login = (email, password) => {
       return response.data;
     })
     .catch((error) => {
+      console.log(error)
       toast.error("🦄" + error.message);
     });
 };
