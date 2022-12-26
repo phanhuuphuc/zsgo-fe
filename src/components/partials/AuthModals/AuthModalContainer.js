@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { useDispatch, useSelector } from "react-redux";
 import { Navigate, useNavigate  } from 'react-router-dom';
 import LoginModalComponents from './AuthModalsComponents';
-import {  toast } from 'react-toastify';
 import { login } from "@/redux/actions/auth";
 
 const LoginModalContainer = () => {
