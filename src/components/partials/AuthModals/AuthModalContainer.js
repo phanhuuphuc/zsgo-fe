@@ -1,11 +1,9 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from "react-redux";
-import { Navigate, useNavigate  } from 'react-router-dom';
 import LoginModalComponents from './AuthModalsComponents';
 import { login } from "@/redux/actions/auth";
 
 const LoginModalContainer = () => {
-  let navigate = useNavigate();
   const [loginForm, setLoginForm] = useState({
     email: "",
     password: ""
@@ -19,13 +17,13 @@ const LoginModalContainer = () => {
   });
 
 
-  const [loading, setLoading] = useState(false);
+  // const [loading, setLoading] = useState(false);
   const [closeModal, setCloseModal] = useState(false);
   const { isLoggedIn } = useSelector(state => state.auth);
-  // const { message } = useSelector(state => state.message);
   console.log(isLoggedIn)
-  // console.log(message)
-  
+  useEffect(() => {
+    
+  }, []);
   const dispatch = useDispatch();
   const handleSubmitLogin = (e) => {
     
