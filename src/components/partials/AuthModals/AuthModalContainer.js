@@ -1,41 +1,45 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import LoginModalComponents from './AuthModalsComponents';
+import LoginModalComponents from "./AuthModalsComponents";
 import { login } from "@/redux/actions/auth";
 
 const LoginModalContainer = () => {
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (event.key === "Enter") {
+        handleSubmitLogin();
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, []);
   const [loginForm, setLoginForm] = useState({
     email: "",
-    password: ""
+    password: "",
   });
 
   const [registerForm, setRegisterForm] = useState({
     name: "",
     email: "",
     password: "",
-    comfirm_password: ""
+    comfirm_password: "",
   });
 
-
+  const btnCloseRef = useRef();
+  const btnSubmitRef = useRef();
   // const [loading, setLoading] = useState(false);
-  const [closeModal, setCloseModal] = useState(false);
-  const { isLoggedIn } = useSelector(state => state.auth);
-  console.log(isLoggedIn)
-  useEffect(() => {
-    
-  }, []);
+  const { isLoggedIn } = useSelector((state) => state.auth);
+  console.log(isLoggedIn);
   const dispatch = useDispatch();
   const handleSubmitLogin = (e) => {
-    
-     dispatch(login(loginForm.email, loginForm.password))
-        .then(() => {
-          // navigate("/help");
-          
-          setCloseModal(true)
-        })
-        .catch(() => {
-          // setLoading(false);
-        });
+    dispatch(login(loginForm.email, loginForm.password))
+      .then(() => {
+        handleCloseModal();
+      })
+      .catch(() => {});
     // } else {
     //   setLoading(false);
     // }
@@ -47,25 +51,27 @@ const LoginModalContainer = () => {
   };
 
   const handleCloseModal = () => {
-    setCloseModal(true);
+    btnCloseRef.current.click();
   };
 
   const handleLogOut = () => {
-    console.log('Log out');
+    console.log("Log out");
   };
 
   return (
     <LoginModalComponents
       handleSubmitLogin={handleSubmitLogin}
       setLoginForm={setLoginForm}
+      btnCloseRef={btnCloseRef}
+      btnSubmitRef={btnSubmitRef}
       loginForm={loginForm}
       setRegisterForm={setRegisterForm}
       registerForm={registerForm}
       handleLogOut={handleLogOut}
-      closeModal={closeModal}
+      handleCloseModal={handleCloseModal}
       handleSubmitRegister={handleSubmitRegister}
     />
   );
-}
+};
 
 export default LoginModalContainer;

@@ -1,6 +1,6 @@
 import axios from "axios";
 import { toast } from "react-toastify";
-import { REQUEST_SUCCESS } from "@/components/constants/constants";
+import { REQUEST_SUCCESS } from "@/constants/constants";
 const API_URL = "http://highspeed.test/api/auth/";
 
 const register = (username, email, password) => {

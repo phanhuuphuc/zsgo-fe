@@ -8,7 +8,6 @@ import {
 } from "./types";
 import { toast } from "react-toastify";
 import AuthService from "@/services/auth.service";
-
 export const register = (username, email, password) => (dispatch) => {
   return AuthService.register(username, email, password).then(
     (response) => {
@@ -46,25 +45,23 @@ export const register = (username, email, password) => (dispatch) => {
 };
 
 export const login = (username, password) => (dispatch) => {
-  return AuthService.login(username, password).then(
-    (data) => {
-      if (data.status === true && data.data.accessToken) {
-        dispatch({
-          type: LOGIN_SUCCESS,
-          payload: { user: data },
-        });
-          localStorage.setItem("user", JSON.stringify(data.data));
-          toast.success('Enjoy the game!');
-        return Promise.resolve();
-      } else {
-        dispatch({
-          type: LOGIN_FAIL,
-        });
-        toast.error('Sai thông tin rồi, thử lại nhé!');
-        return Promise.reject();
-      }
+  return AuthService.login(username, password).then((data) => {
+    if (data.status === true && data.data.accessToken) {
+      dispatch({
+        type: LOGIN_SUCCESS,
+        payload: { user: data },
+      });
+      localStorage.setItem("user", JSON.stringify(data.data));
+      toast.success("Enjoy the game!");
+      return Promise.resolve();
+    } else {
+      dispatch({
+        type: LOGIN_FAIL,
+      });
+      toast.error("Sai thông tin rồi, thử lại nhé!");
+      return Promise.reject();
     }
-  );
+  });
 };
 
 export const logout = () => (dispatch) => {

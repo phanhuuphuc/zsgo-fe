@@ -1,5 +1,4 @@
-import React, { useEffect } from "react";
-import styles from "./Header.module.scss";
+import React from "react";
 import Logo from "@/assets/images/logo2.png";
 import { Link } from "react-router-dom";
 import {
@@ -7,7 +6,7 @@ import {
   GAME_DETAILS_PAGE_PATH,
   HELP_PAGE_PATH,
   GAMER_PROFILE_PAGE_PATH,
-} from "@/components/constants/path";
+} from "@//constants/path";
 import LoginModal from "@/components/partials/AuthModals/AuthModalContainer";
 import { useDispatch, useSelector } from "react-redux";
 import { logout } from "@/redux/actions/auth";
@@ -15,9 +14,7 @@ import { logout } from "@/redux/actions/auth";
 const Header = () => {
   const { isLoggedIn } = useSelector((state) => state.auth);
   const dispatch = useDispatch();
-  useEffect(() => {
-    console.log(localStorage.getItem("user"));
-  }, [localStorage.getItem("user")]);
+
   return (
     <React.Fragment>
       <header className="header">
