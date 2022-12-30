@@ -4,22 +4,21 @@ import LoginModalComponents from "./AuthModalsComponents";
 import { login } from "@/redux/actions/auth";
 
 const LoginModalContainer = () => {
+  const [loginForm, setLoginForm] = useState({
+    email: "",
+    password: "",
+  });
   useEffect(() => {
     const handleKeyDown = (event) => {
       if (event.key === "Enter") {
         handleSubmitLogin();
       }
     };
-
     window.addEventListener("keydown", handleKeyDown);
     return () => {
       window.removeEventListener("keydown", handleKeyDown);
     };
   }, []);
-  const [loginForm, setLoginForm] = useState({
-    email: "",
-    password: "",
-  });
 
   const [registerForm, setRegisterForm] = useState({
     name: "",
@@ -30,7 +29,6 @@ const LoginModalContainer = () => {
 
   const btnCloseRef = useRef();
   const btnSubmitRef = useRef();
-  // const [loading, setLoading] = useState(false);
   const { isLoggedIn } = useSelector((state) => state.auth);
   console.log(isLoggedIn);
   const dispatch = useDispatch();
@@ -40,9 +38,6 @@ const LoginModalContainer = () => {
         handleCloseModal();
       })
       .catch(() => {});
-    // } else {
-    //   setLoading(false);
-    // }
   };
 
   const handleSubmitRegister = (e) => {
