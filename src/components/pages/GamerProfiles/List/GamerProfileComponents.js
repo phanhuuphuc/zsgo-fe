@@ -1,18 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import GamerFriends from "../partials/GamerFriends";
 import Overview from "../partials/Overview";
-import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import PlayHistory from "../partials/PlayHistory";
+import Achievement from "../partials/Achievement";
 const GamerProfile = () => {
   const [currentPage, setCurrentPage] = useState("overView");
-  const [isActive, setIsActive] = useState();
+  const [isActive, setIsActive] = useState(true);
   const pages = {
     overView: <Overview />,
     friends: <GamerFriends />,
-    // about: <About />,
-    // contact: <Contact />
+    playHistory: <PlayHistory />,
+    achievement: <Achievement />,
   };
   const handleNavClick = (page) => {
-	setIsActive("active");
+    setIsActive("active");
     setCurrentPage(page);
   };
   return (
@@ -85,7 +87,14 @@ const GamerProfile = () => {
                   <ul>
                     {Object.keys(pages).map((page) => (
                       <li key={page}>
-                        <a className={setIsActive} onClick={() => handleNavClick(page)}>{page}</a>
+                        <Link
+                          className={
+                            isActive && page === currentPage ? "active" : ""
+                          }
+                          onClick={() => handleNavClick(page)}
+                        >
+                          {page}
+                        </Link>
                       </li>
                     ))}
                   </ul>
@@ -103,9 +112,7 @@ const GamerProfile = () => {
           </div>
         </div>
       </div>
-      {console.log(currentPage)}
       <section className="user-main-dashboard">{pages[currentPage]}</section>
-      {/* {console.log(children)} */}
     </React.Fragment>
   );
 };

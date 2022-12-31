@@ -14,16 +14,15 @@ function App() {
           {publicRouters.map((route, index) => {
             const Layout = route.layout === null ? Fragment : DefaultLayout;
             const Page = route.component;
-            
             return (
-              
               <Route
                 key={index}
                 path={route.path}
                 exact={route.exact}
                 element={
                   <Layout>
-                     {route.path != '/'  ? <Breadcrumbs /> : null }
+                     {route.path != '/'  ? <Breadcrumbs 
+                     currentPage={route.path}/> : null }
                     <Page />
                   </Layout>
                 }

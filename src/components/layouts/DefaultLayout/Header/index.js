@@ -6,11 +6,12 @@ import {
   GAME_DETAILS_PAGE_PATH,
   HELP_PAGE_PATH,
   GAMER_PROFILE_PAGE_PATH,
+  PRODUCT_PAGE_PATH,
 } from "@//constants/path";
 import LoginModal from "@/components/partials/AuthModals/AuthModalContainer";
 import { useDispatch, useSelector } from "react-redux";
 import { logout } from "@/redux/actions/auth";
-// const cx = classNames.bind(styles);
+// const cx = classNameNames.bind(styles);
 const Header = () => {
   const { isLoggedIn } = useSelector((state) => state.auth);
   const dispatch = useDispatch();
@@ -82,16 +83,6 @@ const Header = () => {
                           <i className="far fa-bell"></i>
                         </div>
                       </li>
-                      {isLoggedIn && (
-                        <li>
-                          <button
-                            className="message"
-                            onClick={() => dispatch(logout())}
-                          >
-                            <i className="fas fa-sign-out-alt"></i>
-                          </button>
-                        </li>
-                      )}
                     </ul>
                   </div>
                 </div>
@@ -127,21 +118,31 @@ const Header = () => {
                       <ul className="navbar-nav mr-auto">
                         <li className="nav-item dropdown">
                           <Link
-                            className="nav-link active dropdown-toggle"
+                            className="nav-link active"
                             to={HOME_PAGE_PATH.path}
                           >
-                            Home
+                            Trang chủ
                           </Link>
                         </li>
-                        <li className="nav-item">
-                          <Link className="nav-link" to="/raffles.html">
-                            Car Rental
-                          </Link>
-                        </li>
-                        <li className="nav-item">
-                          <Link className="nav-link" to="/games.html">
-                            Games
-                          </Link>
+                        <li className="nav-item dropdown">
+                          <p className="nav-link  dropdown-toggle">Cửa hàng</p>
+                          <ul className="dropdown-menu">
+                            <li>
+                              <Link
+                                className="dropdown-item"
+                                to={PRODUCT_PAGE_PATH.path}
+                              >
+                                <i className="fa fa-cog fa-spin fa-3x fa-fw"></i>{" "}
+                                Động cơ
+                              </Link>
+                            </li>
+                            <li>
+                              <Link className="dropdown-item" to="/games.html">
+                                <i className="fa fa-cog fa-spin fa-3x fa-fw"></i>{" "}
+                                Xe đua
+                              </Link>
+                            </li>
+                          </ul>
                         </li>
                         <li className="nav-item">
                           <Link className="nav-link" to="/tournaments.html">
@@ -281,25 +282,85 @@ const Header = () => {
                           </li>
                         )}
                         {isLoggedIn && (
-                          <li>
-                            <Link
-                              to={GAMER_PROFILE_PAGE_PATH.path}
-                              className="mybtn1"
-                            >
-                              Profiles
-                            </Link>
-                          </li>
-                          // <li>
-                          //   <Link
-                          //     to="/#"
-                          //     className="mybtn1"
-                          //     data-toggle="modal"
-                          //     data-target="#signin"
-                          //   >
-                          //     {" "}
-                          //     Đăng xuất
-                          //   </Link>
-                          // </li>
+                          <React.Fragment>
+                            <li>
+                              <div className="user-info-menu-area">
+                                <div className="left-area">
+                                  <div className="number">
+                                    <img
+                                      src="assets/images/crypto/i1.png"
+                                      alt=""
+                                    />{" "}
+                                    <p>
+                                      200 <span>Gcoins</span>
+                                    </p>
+                                  </div>
+                                  <ul className="dp-links">
+                                    <li>
+                                      <Link href="#">
+                                        <img
+                                          src="assets/images/crypto/i1.png"
+                                          alt=""
+                                        />{" "}
+                                        <p>
+                                          <b>200</b> <span>Gcoins</span>
+                                        </p>
+                                      </Link>
+                                    </li>
+                                    <li>
+                                      <Link href="#">
+                                        <img
+                                          src="assets/images/crypto/i1.png"
+                                          alt=""
+                                        />{" "}
+                                        <p>
+                                          <b>100.000k</b> <span>MOMO</span>
+                                        </p>
+                                      </Link>
+                                    </li>
+                                  </ul>
+                                </div>
+                                <div className="right-area">
+                                  <div className="icon">
+                                    <img
+                                      src="assets/images/menu-user.png"
+                                      alt=""
+                                    />
+                                  </div>
+                                  <div className="dp-menu">
+                                    <ul className="dp-links">
+                                      <li>
+                                        <Link to={GAMER_PROFILE_PAGE_PATH.path}>
+                                          <i className="far fa-user-circle"></i>
+                                          Thông tin
+                                        </Link>
+                                      </li>
+                                      <li>
+                                        <Link href="#">
+                                          <i className="fas fa-wallet"></i>
+                                          Ví
+                                        </Link>
+                                      </li>
+                                      <li>
+                                        <Link href="#">
+                                          <i className="fas fa-cog"></i>Cài đặt
+                                        </Link>
+                                      </li>
+                                      <li>
+                                        <Link
+                                          onClick={() => dispatch(logout())}
+                                          href="#"
+                                        >
+                                          <i className="fas fa-sign-out-alt"></i>
+                                          Đăng xuất
+                                        </Link>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                          </React.Fragment>
                         )}
                       </ul>
                     </div>

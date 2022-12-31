@@ -1,11 +1,11 @@
 import React from 'react';
-import GameProfileComponents from './GamerProfileComponents';
+import GameProfile from './GamerProfileComponents';
 
 const GamerProfileContainer = () => {
     
     return (
         <React.Fragment>
-            <GameProfileComponents />
+            <GameProfile/>
         </React.Fragment>
         
     );
