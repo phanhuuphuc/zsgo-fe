@@ -1,3 +1,5 @@
+import { ITEM_DETAILS_PAGE_PATH } from '@//constants/path';
+import { Link } from 'react-router-dom';
 const ItemComponents = () => {
 	return (
 		<section className="raffles-section">
@@ -32,9 +34,9 @@ const ItemComponents = () => {
 											</a>
 											<div className="c-bottom">
 												<span>Valued at €51.99</span>
-												<a href="raffles-details.html" className="mybtn1">
-													Buy Ticket
-												</a>
+												<Link to={ITEM_DETAILS_PAGE_PATH.path} className="mybtn1">
+													Chi tiết
+												</Link>
 											</div>
 										</div>
 									</div>
@@ -67,9 +69,9 @@ const ItemComponents = () => {
 											</a>
 											<div className="c-bottom">
 												<span>Valued at €51.99</span>
-												<a href="raffles-details.html" className="mybtn1">
-													Buy Ticket
-												</a>
+												<Link to={ITEM_DETAILS_PAGE_PATH.path} className="mybtn1">
+													Chi tiết
+												</Link>
 											</div>
 										</div>
 									</div>
@@ -102,9 +104,9 @@ const ItemComponents = () => {
 											</a>
 											<div className="c-bottom">
 												<span>Valued at €51.99</span>
-												<a href="raffles-details.html" className="mybtn1">
-													Buy Ticket
-												</a>
+												<Link to={ITEM_DETAILS_PAGE_PATH.path} className="mybtn1">
+													Chi tiết
+												</Link>
 											</div>
 										</div>
 									</div>
@@ -137,9 +139,9 @@ const ItemComponents = () => {
 											</a>
 											<div className="c-bottom">
 												<span>Valued at €51.99</span>
-												<a href="raffles-details.html" className="mybtn1">
-													Buy Ticket
-												</a>
+												<Link to={ITEM_DETAILS_PAGE_PATH.path} className="mybtn1">
+													Chi tiết
+												</Link>
 											</div>
 										</div>
 									</div>
@@ -172,9 +174,9 @@ const ItemComponents = () => {
 											</a>
 											<div className="c-bottom">
 												<span>Valued at €51.99</span>
-												<a href="raffles-details.html" className="mybtn1">
-													Buy Ticket
-												</a>
+												<Link to={ITEM_DETAILS_PAGE_PATH.path} className="mybtn1">
+													Chi tiết
+												</Link>
 											</div>
 										</div>
 									</div>
@@ -207,9 +209,9 @@ const ItemComponents = () => {
 											</a>
 											<div className="c-bottom">
 												<span>Valued at €51.99</span>
-												<a href="raffles-details.html" className="mybtn1">
-													Buy Ticket
-												</a>
+												<Link to={ITEM_DETAILS_PAGE_PATH.path} className="mybtn1">
+													Chi tiết
+												</Link>
 											</div>
 										</div>
 									</div>
@@ -242,9 +244,9 @@ const ItemComponents = () => {
 											</a>
 											<div className="c-bottom">
 												<span>Valued at €51.99</span>
-												<a href="raffles-details.html" className="mybtn1">
-													Buy Ticket
-												</a>
+												<Link to={ITEM_DETAILS_PAGE_PATH.path} className="mybtn1">
+													Chi tiết
+												</Link>
 											</div>
 										</div>
 									</div>
@@ -277,9 +279,9 @@ const ItemComponents = () => {
 											</a>
 											<div className="c-bottom">
 												<span>Valued at €51.99</span>
-												<a href="raffles-details.html" className="mybtn1">
-													Buy Ticket
-												</a>
+												<Link to={ITEM_DETAILS_PAGE_PATH.path} className="mybtn1">
+													Chi tiết
+												</Link>
 											</div>
 										</div>
 									</div>

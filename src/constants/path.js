@@ -9,13 +9,12 @@ export const HELP_PAGE_PATH = { path: '/help', route: 'help' };
  * gamer profile page path
  */
 
-export const GAME_DETAILS_PAGE_PATH = { path: '/game-details', route: 'game-details' };
 export const GAMER_PROFILE_PAGE_PATH = { path: '/gamer-profile', route: 'gamer-profiles' };
 
 /**
  * webshop page path
  */
-
+export const ITEM_DETAILS_PAGE_PATH = { path: '/webshop/item-details', route: 'game-details' };
 export const WEBSHOP_ITEM_PAGE_PATH = { path: '/webshop/item', route: 'item' };
 export const WEBSHOP_CAR_PAGE_PATH = { path: '/webshop/car', route: 'car' };
 

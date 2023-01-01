@@ -3,7 +3,7 @@ import Logo from '@/assets/images/logo2.png';
 import { Link } from 'react-router-dom';
 import {
 	HOME_PAGE_PATH,
-	GAME_DETAILS_PAGE_PATH,
+	ITEM_DETAILS_PAGE_PATH,
 	HELP_PAGE_PATH,
 	GAMER_PROFILE_PAGE_PATH,
 	WEBSHOP_ITEM_PAGE_PATH,
@@ -179,30 +179,9 @@ const Header = () => {
 														aria-haspopup="true"
 														aria-expanded="false"
 													>
-														Pages
+														Hàng ngày
 													</Link>
 													<ul className="dropdown-menu">
-														<li>
-															<Link className="dropdown-item" to="/about.html">
-																{' '}
-																<i className="fa fa-angle-double-right"></i>
-																About
-															</Link>
-														</li>
-														<li>
-															<Link className="dropdown-item" to="/bonuse-page.html">
-																{' '}
-																<i className="fa fa-angle-double-right"></i>
-																Bonuse
-															</Link>
-														</li>
-														<li>
-															<Link className="dropdown-item" to="/ticket-page.html">
-																{' '}
-																<i className="fa fa-angle-double-right"></i>
-																Ticket Page
-															</Link>
-														</li>
 														<li>
 															<Link className="dropdown-item" to="/raffles-details.html">
 																{' '}
@@ -213,7 +192,7 @@ const Header = () => {
 														<li>
 															<Link
 																className="dropdown-item"
-																to={GAME_DETAILS_PAGE_PATH.path}
+																to={ITEM_DETAILS_PAGE_PATH.path}
 															>
 																{' '}
 																<i className="fa fa-angle-double-right"></i>
