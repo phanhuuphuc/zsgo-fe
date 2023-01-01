@@ -9,6 +9,7 @@ import {
 	WEBSHOP_ITEM_PAGE_PATH,
 	WEBSHOP_CAR_PAGE_PATH,
 	EVENT_ACUTION_PAGE_PATH,
+	DAILY_CLAIM_PAGE_PATH,
 } from '@//constants/path';
 import LoginModal from '@/components/partials/AuthModals/AuthModalContainer';
 import { useDispatch, useSelector } from 'react-redux';
@@ -183,41 +184,13 @@ const Header = () => {
 													</Link>
 													<ul className="dropdown-menu">
 														<li>
-															<Link className="dropdown-item" to="/raffles-details.html">
-																{' '}
-																<i className="fa fa-angle-double-right"></i>
-																Raffles Details
-															</Link>
-														</li>
-														<li>
 															<Link
 																className="dropdown-item"
-																to={ITEM_DETAILS_PAGE_PATH.path}
+																to={DAILY_CLAIM_PAGE_PATH.path}
 															>
 																{' '}
 																<i className="fa fa-angle-double-right"></i>
-																Games Details
-															</Link>
-														</li>
-														<li>
-															<Link className="dropdown-item" to="/tournaments2.html">
-																{' '}
-																<i className="fa fa-angle-double-right"></i>
-																Tournaments Details
-															</Link>
-														</li>
-														<li>
-															<Link className="dropdown-item" to="/gamer-profile1.html">
-																{' '}
-																<i className="fa fa-angle-double-right"></i>
-																Gamer Profile Public
-															</Link>
-														</li>
-														<li>
-															<Link className="dropdown-item" to="/gamer-profile6.html">
-																{' '}
-																<i className="fa fa-angle-double-right"></i>
-																Gamer Problie Private{' '}
+																Điểm danh
 															</Link>
 														</li>
 														<li>
@@ -226,18 +199,7 @@ const Header = () => {
 																<i className="fa fa-angle-double-right"></i>Help
 															</Link>
 														</li>
-														<li>
-															<Link className="dropdown-item" to="/404.html">
-																{' '}
-																<i className="fa fa-angle-double-right"></i>404
-															</Link>
-														</li>
 													</ul>
-												</li>
-												<li className="nav-item">
-													<Link className="nav-link" to="/contact.html">
-														Contact
-													</Link>
 												</li>
 												{!isLoggedIn && (
 													<li>

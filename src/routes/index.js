@@ -15,7 +15,9 @@ import {
 	WEBSHOP_CAR_PAGE_PATH,
 	EVENT_ACUTION_PAGE_PATH,
 	ACUTION_DETAILS_PAGE_PATH,
+	DAILY_CLAIM_PAGE_PATH,
 } from '@//constants/path';
+import DailyClaim from '@/components/pages/DailyClaim/List/DailyClaimContainer';
 const publicRouters = [
 	{ path: HOME_PAGE_PATH.path, component: Home, exact: true },
 	{ path: HELP_PAGE_PATH.path, component: Help, exact: true },
@@ -25,6 +27,7 @@ const publicRouters = [
 	{ path: WEBSHOP_CAR_PAGE_PATH.path, component: Car, exact: true },
 	{ path: EVENT_ACUTION_PAGE_PATH.path, component: Acution, exact: true },
 	{ path: ACUTION_DETAILS_PAGE_PATH.path, component: AcutionDetails, exact: true },
+	{ path: DAILY_CLAIM_PAGE_PATH.path, component: DailyClaim, exact: true },
 ];
 const privateRouters = [];
 export { publicRouters, privateRouters };
