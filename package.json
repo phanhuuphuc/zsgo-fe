@@ -56,6 +56,7 @@
     "css-loader": "^6.7.3",
     "customize-cra": "^1.0.0",
     "file-loader": "^6.2.0",
+    "prettier": "2.8.1",
     "react-app-rewired": "^2.2.1",
     "sass": "^1.45.0",
     "sass-loader": "^10.4.1",
