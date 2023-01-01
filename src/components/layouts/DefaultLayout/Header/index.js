@@ -167,7 +167,7 @@ const Header = () => {
 													</ul>
 												</li>
 											</ul>
-											<Link className="navbar-brand  d-none d-lg-block" to="/index.html">
+											<Link className="navbar-brand  d-none d-lg-block" to={HOME_PAGE_PATH.path}>
 												<img className="l2" src={Logo} alt="" />
 											</Link>
 											<ul className="navbar-nav ml-auto">
