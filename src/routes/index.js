@@ -1,4 +1,4 @@
-import Home from '@/components/pages/Home/List/HomeComponents';
+import Home from '@/components/pages/Home/List/HomeContainer';
 import Help from '@/components/pages/Help/List/HelpComponents';
 import GamerProfile from '@/components/pages/GamerProfiles/List/GamerProfileContainer';
 import Item from '@/components/pages/Webshop/Item/List/ItemContainer';
