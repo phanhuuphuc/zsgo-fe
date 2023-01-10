@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const AuctionDetailsComponents = () => {
 	return (
 		<section className="turnaments-section">
@@ -12,9 +14,9 @@ const AuctionDetailsComponents = () => {
 											<img src="/assets/images/game-play/1.png" alt="" />
 										</div>
 										<div className="contant">
-											<a href="#" className="mybtn2">
+											<Link to="#" className="mybtn2">
 												Mua ngay
-											</a>
+											</Link>
 										</div>
 									</div>
 								</div>
@@ -54,24 +56,24 @@ const AuctionDetailsComponents = () => {
 									<h4>37 People Playing</h4>
 									<ul>
 										<li>
-											<a href="#">
+											<Link to="#">
 												<img src="/assets/images/player/sm1.png" alt="" />
-											</a>
+											</Link>
 										</li>
 										<li>
-											<a href="#">
+											<Link to="#">
 												<img src="/assets/images/player/sm2.png" alt="" />
-											</a>
+											</Link>
 										</li>
 										<li>
-											<a href="#">
+											<Link to="#">
 												<img src="/assets/images/player/sm3.png" alt="" />
-											</a>
+											</Link>
 										</li>
 										<li>
-											<a href="#">
+											<Link to="#">
 												<img src="/assets/images/player/sm4.png" alt="" />
-											</a>
+											</Link>
 										</li>
 									</ul>
 								</div>
@@ -82,9 +84,9 @@ const AuctionDetailsComponents = () => {
 									</div>
 								</div>
 								<div className="right">
-									<a href="#" className="mybtn2">
+									<Link to="#" className="mybtn2">
 										Đấu giá
-									</a>
+									</Link>
 								</div>
 							</div>
 						</div>

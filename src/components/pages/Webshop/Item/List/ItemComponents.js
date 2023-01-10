@@ -29,9 +29,9 @@ const ItemComponents = () => {
 											</div>
 										</div>
 										<div className="content-area">
-											<a href="raffles-details.html">
+											<Link href="raffles-details.html">
 												<h4>HyperX Pulsefire FPS PRO</h4>
-											</a>
+											</Link>
 											<div className="c-bottom">
 												<span>Valued at €51.99</span>
 												<Link to={ITEM_DETAILS_PAGE_PATH.path} className="mybtn1">
@@ -64,9 +64,9 @@ const ItemComponents = () => {
 											</div>
 										</div>
 										<div className="content-area">
-											<a href="raffles-details.html">
+											<Link href="raffles-details.html">
 												<h4>HyperX - JETBLACK</h4>
-											</a>
+											</Link>
 											<div className="c-bottom">
 												<span>Valued at €51.99</span>
 												<Link to={ITEM_DETAILS_PAGE_PATH.path} className="mybtn1">
@@ -99,9 +99,9 @@ const ItemComponents = () => {
 											</div>
 										</div>
 										<div className="content-area">
-											<a href="raffles-details.html">
+											<Link href="raffles-details.html">
 												<h4>HyperX Cloud II Gunmetal</h4>
-											</a>
+											</Link>
 											<div className="c-bottom">
 												<span>Valued at €51.99</span>
 												<Link to={ITEM_DETAILS_PAGE_PATH.path} className="mybtn1">
@@ -134,9 +134,9 @@ const ItemComponents = () => {
 											</div>
 										</div>
 										<div className="content-area">
-											<a href="raffles-details.html">
+											<Link href="raffles-details.html">
 												<h4>HyperX Pulsefire FPS PRO</h4>
-											</a>
+											</Link>
 											<div className="c-bottom">
 												<span>Valued at €51.99</span>
 												<Link to={ITEM_DETAILS_PAGE_PATH.path} className="mybtn1">
@@ -169,9 +169,9 @@ const ItemComponents = () => {
 											</div>
 										</div>
 										<div className="content-area">
-											<a href="raffles-details.html">
+											<Link href="raffles-details.html">
 												<h4>HyperX Pulsefire FPS PRO</h4>
-											</a>
+											</Link>
 											<div className="c-bottom">
 												<span>Valued at €51.99</span>
 												<Link to={ITEM_DETAILS_PAGE_PATH.path} className="mybtn1">
@@ -204,9 +204,9 @@ const ItemComponents = () => {
 											</div>
 										</div>
 										<div className="content-area">
-											<a href="raffles-details.html">
+											<Link href="raffles-details.html">
 												<h4>HyperX Pulsefire FPS PRO</h4>
-											</a>
+											</Link>
 											<div className="c-bottom">
 												<span>Valued at €51.99</span>
 												<Link to={ITEM_DETAILS_PAGE_PATH.path} className="mybtn1">
@@ -239,9 +239,9 @@ const ItemComponents = () => {
 											</div>
 										</div>
 										<div className="content-area">
-											<a href="raffles-details.html">
+											<Link href="raffles-details.html">
 												<h4>HyperX Pulsefire FPS PRO</h4>
-											</a>
+											</Link>
 											<div className="c-bottom">
 												<span>Valued at €51.99</span>
 												<Link to={ITEM_DETAILS_PAGE_PATH.path} className="mybtn1">
@@ -274,9 +274,9 @@ const ItemComponents = () => {
 											</div>
 										</div>
 										<div className="content-area">
-											<a href="raffles-details.html">
+											<Link href="raffles-details.html">
 												<h4>HyperX Pulsefire FPS PRO</h4>
-											</a>
+											</Link>
 											<div className="c-bottom">
 												<span>Valued at €51.99</span>
 												<Link to={ITEM_DETAILS_PAGE_PATH.path} className="mybtn1">
@@ -293,39 +293,39 @@ const ItemComponents = () => {
 								<nav className="page-pagination">
 									<ul className="pagination justify-content-center">
 										<li className="page-item">
-											<a className="page-link prev" href="#" tabIndex="-1">
+											<Link className="page-link prev" href="#" tabIndex="-1">
 												Previous
-											</a>
+											</Link>
 										</li>
 										<li className="page-item">
-											<a className="page-link num" href="#">
+											<Link className="page-link num" href="#">
 												1
-											</a>
+											</Link>
 										</li>
 										<li className="page-item">
-											<a className="page-link num" href="#">
+											<Link className="page-link num" href="#">
 												2
-											</a>
+											</Link>
 										</li>
 										<li className="page-item">
-											<a className="page-link num active" href="#">
+											<Link className="page-link num active" href="#">
 												3
-											</a>
+											</Link>
 										</li>
 										<li className="page-item">
-											<a className="page-link num" href="#">
+											<Link className="page-link num" href="#">
 												4
-											</a>
+											</Link>
 										</li>
 										<li className="page-item">
-											<a className="page-link num" href="#">
+											<Link className="page-link num" href="#">
 												5
-											</a>
+											</Link>
 										</li>
 										<li className="page-item">
-											<a className="page-link next" href="#">
+											<Link className="page-link next" href="#">
 												Next
-											</a>
+											</Link>
 										</li>
 									</ul>
 								</nav>
@@ -339,7 +339,7 @@ const ItemComponents = () => {
 						<div className="winner-lists">
 							<div className="header-area">
 								<h4 className="title">Recent winners</h4>
-								<a href="#">View All</a>
+								<Link href="#">View All</Link>
 							</div>
 							<div className="single-winner">
 								<div className="img">

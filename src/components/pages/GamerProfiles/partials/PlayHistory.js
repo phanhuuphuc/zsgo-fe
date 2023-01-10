@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const PlayHistory = () => {
   return (
     <div className="container">
@@ -25,36 +27,36 @@ const PlayHistory = () => {
                         <div className="players">
                           <ul>
                             <li>
-                              <a href="#">
+                              <Link to="/">
                                 <img
                                   src="assets/images/player/sm1.png"
                                   alt=""
                                 />
-                              </a>
+                              </Link>
                             </li>
                             <li>
-                              <a href="#">
+                              <Link to="/">
                                 <img
                                   src="assets/images/player/sm2.png"
                                   alt=""
                                 />
-                              </a>
+                              </Link>
                             </li>
                             <li>
-                              <a href="#">
+                              <Link to="/">
                                 <img
                                   src="assets/images/player/sm3.png"
                                   alt=""
                                 />
-                              </a>
+                              </Link>
                             </li>
                             <li>
-                              <a href="#">
+                              <Link to="/">
                                 <img
                                   src="assets/images/player/sm4.png"
                                   alt=""
                                 />
-                              </a>
+                              </Link>
                             </li>
                             <li>
                               <span>32+</span>
@@ -75,9 +77,9 @@ const PlayHistory = () => {
                         </div>
                       </td>
                       <td>
-                        <a href="#" className="mybtn2">
+                        <Link to="/" className="mybtn2">
                           Challenge
-                        </a>
+                        </Link>
                       </td>
                     </tr>
                     <tr>
@@ -94,36 +96,36 @@ const PlayHistory = () => {
                         <div className="players">
                           <ul>
                             <li>
-                              <a href="#">
+                              <Link to="/">
                                 <img
                                   src="assets/images/player/sm1.png"
                                   alt=""
                                 />
-                              </a>
+                              </Link>
                             </li>
                             <li>
-                              <a href="#">
+                              <Link to="/">
                                 <img
                                   src="assets/images/player/sm2.png"
                                   alt=""
                                 />
-                              </a>
+                              </Link>
                             </li>
                             <li>
-                              <a href="#">
+                              <Link to="/">
                                 <img
                                   src="assets/images/player/sm3.png"
                                   alt=""
                                 />
-                              </a>
+                              </Link>
                             </li>
                             <li>
-                              <a href="#">
+                              <Link to="/">
                                 <img
                                   src="assets/images/player/sm4.png"
                                   alt=""
                                 />
-                              </a>
+                              </Link>
                             </li>
                             <li>
                               <span>32+</span>
@@ -144,9 +146,9 @@ const PlayHistory = () => {
                         </div>
                       </td>
                       <td>
-                        <a href="#" className="mybtn2">
+                        <Link to="/" className="mybtn2">
                           Challenge
-                        </a>
+                        </Link>
                       </td>
                     </tr>
                     <tr>
@@ -163,36 +165,36 @@ const PlayHistory = () => {
                         <div className="players">
                           <ul>
                             <li>
-                              <a href="#">
+                              <Link to="/">
                                 <img
                                   src="assets/images/player/sm1.png"
                                   alt=""
                                 />
-                              </a>
+                              </Link>
                             </li>
                             <li>
-                              <a href="#">
+                              <Link to="/">
                                 <img
                                   src="assets/images/player/sm2.png"
                                   alt=""
                                 />
-                              </a>
+                              </Link>
                             </li>
                             <li>
-                              <a href="#">
+                              <Link to="/">
                                 <img
                                   src="assets/images/player/sm3.png"
                                   alt=""
                                 />
-                              </a>
+                              </Link>
                             </li>
                             <li>
-                              <a href="#">
+                              <Link to="/">
                                 <img
                                   src="assets/images/player/sm4.png"
                                   alt=""
                                 />
-                              </a>
+                              </Link>
                             </li>
                             <li>
                               <span>32+</span>
@@ -213,9 +215,9 @@ const PlayHistory = () => {
                         </div>
                       </td>
                       <td>
-                        <a href="#" className="mybtn2">
+                        <Link to="/" className="mybtn2">
                           Challenge
-                        </a>
+                        </Link>
                       </td>
                     </tr>
                     <tr>
@@ -232,36 +234,36 @@ const PlayHistory = () => {
                         <div className="players">
                           <ul>
                             <li>
-                              <a href="#">
+                              <Link to="/">
                                 <img
                                   src="assets/images/player/sm1.png"
                                   alt=""
                                 />
-                              </a>
+                              </Link>
                             </li>
                             <li>
-                              <a href="#">
+                              <Link to="/">
                                 <img
                                   src="assets/images/player/sm2.png"
                                   alt=""
                                 />
-                              </a>
+                              </Link>
                             </li>
                             <li>
-                              <a href="#">
+                              <Link to="/">
                                 <img
                                   src="assets/images/player/sm3.png"
                                   alt=""
                                 />
-                              </a>
+                              </Link>
                             </li>
                             <li>
-                              <a href="#">
+                              <Link to="/">
                                 <img
                                   src="assets/images/player/sm4.png"
                                   alt=""
                                 />
-                              </a>
+                              </Link>
                             </li>
                             <li>
                               <span>32+</span>
@@ -282,9 +284,9 @@ const PlayHistory = () => {
                         </div>
                       </td>
                       <td>
-                        <a href="#" className="mybtn2">
+                        <Link to="/" className="mybtn2">
                           Challenge
-                        </a>
+                        </Link>
                       </td>
                     </tr>
                     <tr>
@@ -301,36 +303,36 @@ const PlayHistory = () => {
                         <div className="players">
                           <ul>
                             <li>
-                              <a href="#">
+                              <Link to="/">
                                 <img
                                   src="assets/images/player/sm1.png"
                                   alt=""
                                 />
-                              </a>
+                              </Link>
                             </li>
                             <li>
-                              <a href="#">
+                              <Link to="/">
                                 <img
                                   src="assets/images/player/sm2.png"
                                   alt=""
                                 />
-                              </a>
+                              </Link>
                             </li>
                             <li>
-                              <a href="#">
+                              <Link to="/">
                                 <img
                                   src="assets/images/player/sm3.png"
                                   alt=""
                                 />
-                              </a>
+                              </Link>
                             </li>
                             <li>
-                              <a href="#">
+                              <Link to="/">
                                 <img
                                   src="assets/images/player/sm4.png"
                                   alt=""
                                 />
-                              </a>
+                              </Link>
                             </li>
                             <li>
                               <span>32+</span>
@@ -351,9 +353,9 @@ const PlayHistory = () => {
                         </div>
                       </td>
                       <td>
-                        <a href="#" className="mybtn2">
+                        <Link to="/" className="mybtn2">
                           Challenge
-                        </a>
+                        </Link>
                       </td>
                     </tr>
                     <tr>
@@ -370,36 +372,36 @@ const PlayHistory = () => {
                         <div className="players">
                           <ul>
                             <li>
-                              <a href="#">
+                              <Link to="/">
                                 <img
                                   src="assets/images/player/sm1.png"
                                   alt=""
                                 />
-                              </a>
+                              </Link>
                             </li>
                             <li>
-                              <a href="#">
+                              <Link to="/">
                                 <img
                                   src="assets/images/player/sm2.png"
                                   alt=""
                                 />
-                              </a>
+                              </Link>
                             </li>
                             <li>
-                              <a href="#">
+                              <Link to="/">
                                 <img
                                   src="assets/images/player/sm3.png"
                                   alt=""
                                 />
-                              </a>
+                              </Link>
                             </li>
                             <li>
-                              <a href="#">
+                              <Link to="/">
                                 <img
                                   src="assets/images/player/sm4.png"
                                   alt=""
                                 />
-                              </a>
+                              </Link>
                             </li>
                             <li>
                               <span>32+</span>
@@ -420,9 +422,9 @@ const PlayHistory = () => {
                         </div>
                       </td>
                       <td>
-                        <a href="#" className="mybtn2">
+                        <Link to="/" className="mybtn2">
                           Challenge
-                        </a>
+                        </Link>
                       </td>
                     </tr>
                   </tbody>

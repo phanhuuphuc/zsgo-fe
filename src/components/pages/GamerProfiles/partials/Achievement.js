@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Achievement = () => {
     return ( <div className="container">
     <div className="row">
@@ -5,7 +7,7 @@ const Achievement = () => {
             <div className="achievment-area big">
                 <div className="header-area">
                     <h4>Achievements</h4>
-                    <a href="#">All Rewards <i className="fas fa-chevron-right"></i></a>
+                    <Link to="#">All Rewards <i className="fas fa-chevron-right"></i></Link>
                 </div>
                 <ul>
                     <li>

@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef, useCallback } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import LoginModalComponents from "./AuthModalsComponents";
-import { login } from "@/redux/actions/auth";
+import { login, register } from "@/redux/actions/auth";
 
 const LoginModalContainer = () => {
   const dispatch = useDispatch();
@@ -16,8 +16,9 @@ const LoginModalContainer = () => {
   const [registerForm, setRegisterForm] = useState({
     name: "",
     email: "",
+    avatar: "",
     password: "",
-    comfirm_password: "",
+    confirmPassword: "",
   });
   
   const handleSubmitLogin = useCallback(() => {
@@ -44,13 +45,33 @@ const LoginModalContainer = () => {
 
   const handleSubmitRegister = (e) => {
     e.preventDefault();
-    console.log(registerForm);
+    const formData = new FormData();
+    formData.append("avatar", registerForm.avatar);
+    formData.append("name", registerForm.name);
+    formData.append("email", registerForm.email);
+    formData.append("password", registerForm.password);
+    formData.append("confirmPassword", registerForm.confirmPassword);
+    dispatch(register(Object.fromEntries(formData)));
+    console.log(Object.fromEntries(formData));
   };
 
   const handleCloseModal = () => {
     btnCloseRef.current.click();
   };
 
+  const handleClearForm = () => {
+    setLoginForm({
+      email: "",
+      password: "",
+    });
+    setRegisterForm({
+      name: "",
+      email: "",
+      avatar: "",
+      password: "",
+      confirmPassword: "",
+    })
+  };
   const handleLogOut = () => {
     console.log("Log out");
   };

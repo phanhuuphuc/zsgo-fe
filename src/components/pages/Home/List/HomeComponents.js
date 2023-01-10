@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const HomeComponents = () => {
 	return (
@@ -15,15 +16,15 @@ const HomeComponents = () => {
 										<img src="./assets/images/text.png" alt="" />
 									</h1>
 									<div className="links">
-										<a href="#" className="mybtn1">
+										<Link href="#" className="mybtn1">
 											Tải Game
-										</a>
-										<a
+										</Link>
+										<Link
 											href="https://www.youtube.com/watch?v=jssO8-5qmag"
 											className="video_btn play-video mfp-iframe"
 										>
 											<i className="fas fa-play"></i>
-										</a>
+										</Link>
 									</div>
 								</div>
 							</div>
@@ -38,9 +39,9 @@ const HomeComponents = () => {
 							<div className="left-info">
 								<h5>Try to check out our next </h5>
 								<h3>Tournaments!</h3>
-								<a href="#" className="mybtn1">
+								<Link href="#" className="mybtn1">
 									Join Us
-								</a>
+								</Link>
 							</div>
 						</div>
 						<div className="col-lg-4 col-md-6">
@@ -109,30 +110,30 @@ const HomeComponents = () => {
 									<img src="./assets/images/game-play/1.png" alt="" />
 								</div>
 								<div className="contant">
-									<a href="#" className="mybtn1">
+									<Link href="#" className="mybtn1">
 										Play
-									</a>
+									</Link>
 									<h4>37 People Playing</h4>
 									<ul>
 										<li>
-											<a href="#">
+											<Link href="#">
 												<img src="./assets/images/player/sm1.png" alt="" />
-											</a>
+											</Link>
 										</li>
 										<li>
-											<a href="#">
+											<Link href="#">
 												<img src="./assets/images/player/sm2.png" alt="" />
-											</a>
+											</Link>
 										</li>
 										<li>
-											<a href="#">
+											<Link href="#">
 												<img src="./assets/images/player/sm3.png" alt="" />
-											</a>
+											</Link>
 										</li>
 										<li>
-											<a href="#">
+											<Link href="#">
 												<img src="./assets/images/player/sm4.png" alt="" />
-											</a>
+											</Link>
 										</li>
 										<li>
 											<span>32+</span>
@@ -147,30 +148,30 @@ const HomeComponents = () => {
 									<img src="./assets/images/game-play/2.png" alt="" />
 								</div>
 								<div className="contant">
-									<a href="#" className="mybtn1">
+									<Link href="#" className="mybtn1">
 										Play
-									</a>
+									</Link>
 									<h4>37 People Playing</h4>
 									<ul>
 										<li>
-											<a href="#">
+											<Link href="#">
 												<img src="./assets/images/player/sm1.png" alt="" />
-											</a>
+											</Link>
 										</li>
 										<li>
-											<a href="#">
+											<Link href="#">
 												<img src="./assets/images/player/sm2.png" alt="" />
-											</a>
+											</Link>
 										</li>
 										<li>
-											<a href="#">
+											<Link href="#">
 												<img src="./assets/images/player/sm3.png" alt="" />
-											</a>
+											</Link>
 										</li>
 										<li>
-											<a href="#">
+											<Link href="#">
 												<img src="./assets/images/player/sm4.png" alt="" />
-											</a>
+											</Link>
 										</li>
 										<li>
 											<span>32+</span>
@@ -185,30 +186,30 @@ const HomeComponents = () => {
 									<img src="./assets/images/game-play/3.png" alt="" />
 								</div>
 								<div className="contant">
-									<a href="#" className="mybtn1">
+									<Link href="#" className="mybtn1">
 										Play
-									</a>
+									</Link>
 									<h4>37 People Playing</h4>
 									<ul>
 										<li>
-											<a href="#">
+											<Link href="#">
 												<img src="./assets/images/player/sm1.png" alt="" />
-											</a>
+											</Link>
 										</li>
 										<li>
-											<a href="#">
+											<Link href="#">
 												<img src="./assets/images/player/sm2.png" alt="" />
-											</a>
+											</Link>
 										</li>
 										<li>
-											<a href="#">
+											<Link href="#">
 												<img src="./assets/images/player/sm3.png" alt="" />
-											</a>
+											</Link>
 										</li>
 										<li>
-											<a href="#">
+											<Link href="#">
 												<img src="./assets/images/player/sm4.png" alt="" />
-											</a>
+											</Link>
 										</li>
 										<li>
 											<span>32+</span>
@@ -223,30 +224,30 @@ const HomeComponents = () => {
 									<img src="./assets/images/game-play/4.png" alt="" />
 								</div>
 								<div className="contant">
-									<a href="#" className="mybtn1">
+									<Link href="#" className="mybtn1">
 										Play
-									</a>
+									</Link>
 									<h4>37 People Playing</h4>
 									<ul>
 										<li>
-											<a href="#">
+											<Link href="#">
 												<img src="./assets/images/player/sm1.png" alt="" />
-											</a>
+											</Link>
 										</li>
 										<li>
-											<a href="#">
+											<Link href="#">
 												<img src="./assets/images/player/sm2.png" alt="" />
-											</a>
+											</Link>
 										</li>
 										<li>
-											<a href="#">
+											<Link href="#">
 												<img src="./assets/images/player/sm3.png" alt="" />
-											</a>
+											</Link>
 										</li>
 										<li>
-											<a href="#">
+											<Link href="#">
 												<img src="./assets/images/player/sm4.png" alt="" />
-											</a>
+											</Link>
 										</li>
 										<li>
 											<span>32+</span>
@@ -258,9 +259,9 @@ const HomeComponents = () => {
 					</div>
 					<div className="row">
 						<div className="col-lg-12 text-center">
-							<a href="#" className="b-all-btn">
+							<Link href="#" className="b-all-btn">
 								Browser All <img src="./assets/images/arrow.png" alt="" />
-							</a>
+							</Link>
 						</div>
 					</div>
 				</div>
@@ -280,7 +281,7 @@ const HomeComponents = () => {
 						<div className="col-lg-12">
 							<ul className="nav  mb-3" role="tablist">
 								<li className="nav-item">
-									<a
+									<Link
 										className="nav-link active"
 										id="pills-home-tab"
 										data-toggle="pill"
@@ -290,10 +291,10 @@ const HomeComponents = () => {
 										aria-selected="true"
 									>
 										Leaderboard
-									</a>
+									</Link>
 								</li>
 								<li className="nav-item">
-									<a
+									<Link
 										className="nav-link"
 										id="pills-profile-tab"
 										data-toggle="pill"
@@ -303,7 +304,7 @@ const HomeComponents = () => {
 										aria-selected="false"
 									>
 										changellenge
-									</a>
+									</Link>
 								</li>
 							</ul>
 							<div className="tab-content l-a-nav" id="pills-tabContent">
@@ -763,9 +764,9 @@ const HomeComponents = () => {
 												<h4>HyperX Pulsefire FPS PRO</h4>
 												<div className="c-bottom">
 													<span>Valued at €51.99</span>
-													<a href="#" className="mybtn1">
+													<Link href="#" className="mybtn1">
 														Buy Ticket
-													</a>
+													</Link>
 												</div>
 											</div>
 										</div>
@@ -796,9 +797,9 @@ const HomeComponents = () => {
 												<h4>HyperX - JETBLACK</h4>
 												<div className="c-bottom">
 													<span>Valued at €51.99</span>
-													<a href="#" className="mybtn1">
+													<Link href="#" className="mybtn1">
 														Buy Ticket
-													</a>
+													</Link>
 												</div>
 											</div>
 										</div>
@@ -829,9 +830,9 @@ const HomeComponents = () => {
 												<h4>HyperX Cloud II Gunmetal</h4>
 												<div className="c-bottom">
 													<span>Valued at €51.99</span>
-													<a href="#" className="mybtn1">
+													<Link href="#" className="mybtn1">
 														Buy Ticket
-													</a>
+													</Link>
 												</div>
 											</div>
 										</div>
@@ -862,9 +863,9 @@ const HomeComponents = () => {
 												<h4>HyperX Pulsefire FPS PRO</h4>
 												<div className="c-bottom">
 													<span>Valued at €51.99</span>
-													<a href="#" className="mybtn1">
+													<Link href="#" className="mybtn1">
 														Buy Ticket
-													</a>
+													</Link>
 												</div>
 											</div>
 										</div>
@@ -881,7 +882,7 @@ const HomeComponents = () => {
 						<div className="col-lg-12">
 							<div className="top-section">
 								<h3>Recent winners</h3>
-								<a href="#">View all</a>
+								<Link href="#">View all</Link>
 							</div>
 						</div>
 					</div>
@@ -971,9 +972,9 @@ const HomeComponents = () => {
 									Get started in less than 5 min - no credit card required.Gain early access to Jugaro
 									and experience crypto like never before.
 								</h6>
-								<a href="#" className="mybtn1">
+								<Link href="#" className="mybtn1">
 									Join US
-								</a>
+								</Link>
 							</div>
 						</div>
 					</div>

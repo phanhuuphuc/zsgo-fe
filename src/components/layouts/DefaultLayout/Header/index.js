@@ -1,6 +1,8 @@
 import React from 'react';
 import Logo from '@/assets/images/logo2.png';
+import userAvartar from '@/assets/images/default-avt.png';
 import { Link } from 'react-router-dom';
+import '../Header/style.css'
 import {
 	HOME_PAGE_PATH,
 	ITEM_DETAILS_PAGE_PATH,
@@ -252,7 +254,7 @@ const Header = () => {
 																</div>
 																<div className="right-area">
 																	<div className="icon">
-																		<img src="assets/images/menu-user.png" alt="" />
+																		<img className='avatar' src={userAvartar} alt="" />
 																	</div>
 																	<div className="dp-menu">
 																		<ul className="dp-links">

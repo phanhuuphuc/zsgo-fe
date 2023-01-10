@@ -3,11 +3,13 @@ import { toast } from "react-toastify";
 import { REQUEST_SUCCESS } from "@/constants/constants";
 const API_URL = "http://highspeed.test/api/auth/";
 
-const register = (username, email, password) => {
+const register = (formData) => {
   return axios.post(API_URL + "register", {
-    username,
-    email,
-    password,
+    data:formData 
+  }).then((response) => {
+    console.log(response)
+  }).catch((error) => {
+    console.log(error)
   });
 };
 

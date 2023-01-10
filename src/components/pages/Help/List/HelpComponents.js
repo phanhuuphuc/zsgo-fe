@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 const HelpComponents = () => {
   return (
     <React.Fragment>
@@ -9,45 +10,45 @@ const HelpComponents = () => {
               <aside>
                 <ul>
                   <li>
-                    <a href="help1.html">
+                    <Link href="help1.html">
                       <i className="fas fa-chevron-right"></i>User Agreement
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="help2.html">
+                    <Link href="help2.html">
                       <i className="fas fa-chevron-right"></i>Privacy Policy
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="help3.html" className="active">
+                    <Link href="help3.html" className="active">
                       <i className="fas fa-chevron-right"></i>FAQ
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="help4.html">
+                    <Link href="help4.html">
                       <i className="fas fa-chevron-right"></i>Cryptocurrency
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="help5.html">
+                    <Link href="help5.html">
                       <i className="fas fa-chevron-right"></i>Fee
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="help6.html">
+                    <Link href="help6.html">
                       <i className="fas fa-chevron-right"></i>Forget Password
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="help7.html">
+                    <Link href="help7.html">
                       <i className="fas fa-chevron-right"></i>Registration and
                       Login
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="help8.html">
+                    <Link href="help8.html">
                       <i className="fas fa-chevron-right"></i>Technical issues
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </aside>

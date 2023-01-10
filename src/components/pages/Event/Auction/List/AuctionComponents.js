@@ -15,43 +15,43 @@ const AuctionComponents = () => {
 							<div className="t-t-s-nav">
 								<ul className="nav" role="tablist">
 									<li className="nav-item" role="presentation">
-										<a
+										<Link
 											className="nav-link mybtn2 active"
 											id="pills-home-tab"
 											data-toggle="pill"
-											href="#pills-home"
+											to="#pills-home"
 											role="tab"
 											aria-controls="pills-home"
 											aria-selected="true"
 										>
 											Today
-										</a>
+										</Link>
 									</li>
 									<li className="nav-item" role="presentation">
-										<a
+										<Link
 											className="nav-link mybtn2"
 											id="pills-profile-tab"
 											data-toggle="pill"
-											href="#pills-profile"
+											to="#pills-profile"
 											role="tab"
 											aria-controls="pills-profile"
 											aria-selected="false"
 										>
 											This Week
-										</a>
+										</Link>
 									</li>
 									<li className="nav-item" role="presentation">
-										<a
+										<Link
 											className="nav-link mybtn2"
 											id="pills-contact-tab"
 											data-toggle="pill"
-											href="#pills-contact"
+											to="#pills-contact"
 											role="tab"
 											aria-controls="pills-contact"
 											aria-selected="false"
 										>
 											This Weekend
-										</a>
+										</Link>
 									</li>
 								</ul>
 							</div>
@@ -86,24 +86,24 @@ const AuctionComponents = () => {
 												<h4>37 People Playing</h4>
 												<ul>
 													<li>
-														<a href="#">
+														<Link to="#">
 															<img src="/assets/images/player/sm1.png" alt="" />
-														</a>
+														</Link>
 													</li>
 													<li>
-														<a href="#">
+														<Link to="#">
 															<img src="/assets/images/player/sm2.png" alt="" />
-														</a>
+														</Link>
 													</li>
 													<li>
-														<a href="#">
+														<Link to="#">
 															<img src="/assets/images/player/sm3.png" alt="" />
-														</a>
+														</Link>
 													</li>
 													<li>
-														<a href="#">
+														<Link to="#">
 															<img src="/assets/images/player/sm4.png" alt="" />
-														</a>
+														</Link>
 													</li>
 													<li>
 														<span>32+</span>
@@ -161,24 +161,24 @@ const AuctionComponents = () => {
 												<h4>37 People Playing</h4>
 												<ul>
 													<li>
-														<a href="#">
+														<Link to="#">
 															<img src="/assets/images/player/sm1.png" alt="" />
-														</a>
+														</Link>
 													</li>
 													<li>
-														<a href="#">
+														<Link to="#">
 															<img src="/assets/images/player/sm2.png" alt="" />
-														</a>
+														</Link>
 													</li>
 													<li>
-														<a href="#">
+														<Link to="#">
 															<img src="/assets/images/player/sm3.png" alt="" />
-														</a>
+														</Link>
 													</li>
 													<li>
-														<a href="#">
+														<Link to="#">
 															<img src="/assets/images/player/sm4.png" alt="" />
-														</a>
+														</Link>
 													</li>
 													<li>
 														<span>32+</span>
@@ -228,32 +228,32 @@ const AuctionComponents = () => {
 														<img src="/assets/images/game-play/3.png" alt="" />
 													</div>
 													<div className="contant">
-														<a href="tournaments2.html" className="mybtn2">
+														<Link to="tournaments2.html" className="mybtn2">
 															Chi tiết
-														</a>
+														</Link>
 													</div>
 												</div>
 												<h4>37 People Playing</h4>
 												<ul>
 													<li>
-														<a href="#">
+														<Link to="#">
 															<img src="/assets/images/player/sm1.png" alt="" />
-														</a>
+														</Link>
 													</li>
 													<li>
-														<a href="#">
+														<Link to="#">
 															<img src="/assets/images/player/sm2.png" alt="" />
-														</a>
+														</Link>
 													</li>
 													<li>
-														<a href="#">
+														<Link to="#">
 															<img src="/assets/images/player/sm3.png" alt="" />
-														</a>
+														</Link>
 													</li>
 													<li>
-														<a href="#">
+														<Link to="#">
 															<img src="/assets/images/player/sm4.png" alt="" />
-														</a>
+														</Link>
 													</li>
 													<li>
 														<span>32+</span>
@@ -303,32 +303,32 @@ const AuctionComponents = () => {
 														<img src="/assets/images/game-play/4.png" alt="" />
 													</div>
 													<div className="contant">
-														<a href="tournaments2.html" className="mybtn2">
+														<Link to="tournaments2.html" className="mybtn2">
 															Chi tiết
-														</a>
+														</Link>
 													</div>
 												</div>
 												<h4>37 People Playing</h4>
 												<ul>
 													<li>
-														<a href="#">
+														<Link to="#">
 															<img src="/assets/images/player/sm1.png" alt="" />
-														</a>
+														</Link>
 													</li>
 													<li>
-														<a href="#">
+														<Link to="#">
 															<img src="/assets/images/player/sm2.png" alt="" />
-														</a>
+														</Link>
 													</li>
 													<li>
-														<a href="#">
+														<Link to="#">
 															<img src="/assets/images/player/sm3.png" alt="" />
-														</a>
+														</Link>
 													</li>
 													<li>
-														<a href="#">
+														<Link to="#">
 															<img src="/assets/images/player/sm4.png" alt="" />
-														</a>
+														</Link>
 													</li>
 													<li>
 														<span>32+</span>
@@ -387,32 +387,32 @@ const AuctionComponents = () => {
 														<img src="/assets/images/game-play/1.png" alt="" />
 													</div>
 													<div className="contant">
-														<a href="tournaments2.html" className="mybtn2">
+														<Link to="tournaments2.html" className="mybtn2">
 															Chi tiết
-														</a>
+														</Link>
 													</div>
 												</div>
 												<h4>37 People Playing</h4>
 												<ul>
 													<li>
-														<a href="#">
+														<Link to="#">
 															<img src="/assets/images/player/sm1.png" alt="" />
-														</a>
+														</Link>
 													</li>
 													<li>
-														<a href="#">
+														<Link to="#">
 															<img src="/assets/images/player/sm2.png" alt="" />
-														</a>
+														</Link>
 													</li>
 													<li>
-														<a href="#">
+														<Link to="#">
 															<img src="/assets/images/player/sm3.png" alt="" />
-														</a>
+														</Link>
 													</li>
 													<li>
-														<a href="#">
+														<Link to="#">
 															<img src="/assets/images/player/sm4.png" alt="" />
-														</a>
+														</Link>
 													</li>
 													<li>
 														<span>32+</span>
@@ -462,32 +462,32 @@ const AuctionComponents = () => {
 														<img src="/assets/images/game-play/2.png" alt="" />
 													</div>
 													<div className="contant">
-														<a href="tournaments2.html" className="mybtn2">
+														<Link to="tournaments2.html" className="mybtn2">
 															Chi tiết
-														</a>
+														</Link>
 													</div>
 												</div>
 												<h4>37 People Playing</h4>
 												<ul>
 													<li>
-														<a href="#">
+														<Link to="#">
 															<img src="/assets/images/player/sm1.png" alt="" />
-														</a>
+														</Link>
 													</li>
 													<li>
-														<a href="#">
+														<Link to="#">
 															<img src="/assets/images/player/sm2.png" alt="" />
-														</a>
+														</Link>
 													</li>
 													<li>
-														<a href="#">
+														<Link to="#">
 															<img src="/assets/images/player/sm3.png" alt="" />
-														</a>
+														</Link>
 													</li>
 													<li>
-														<a href="#">
+														<Link to="#">
 															<img src="/assets/images/player/sm4.png" alt="" />
-														</a>
+														</Link>
 													</li>
 													<li>
 														<span>32+</span>
@@ -537,32 +537,32 @@ const AuctionComponents = () => {
 														<img src="/assets/images/game-play/3.png" alt="" />
 													</div>
 													<div className="contant">
-														<a href="tournaments2.html" className="mybtn2">
+														<Link to="tournaments2.html" className="mybtn2">
 															Chi tiết
-														</a>
+														</Link>
 													</div>
 												</div>
 												<h4>37 People Playing</h4>
 												<ul>
 													<li>
-														<a href="#">
+														<Link to="#">
 															<img src="/assets/images/player/sm1.png" alt="" />
-														</a>
+														</Link>
 													</li>
 													<li>
-														<a href="#">
+														<Link to="#">
 															<img src="/assets/images/player/sm2.png" alt="" />
-														</a>
+														</Link>
 													</li>
 													<li>
-														<a href="#">
+														<Link to="#">
 															<img src="/assets/images/player/sm3.png" alt="" />
-														</a>
+														</Link>
 													</li>
 													<li>
-														<a href="#">
+														<Link to="#">
 															<img src="/assets/images/player/sm4.png" alt="" />
-														</a>
+														</Link>
 													</li>
 													<li>
 														<span>32+</span>
@@ -612,32 +612,32 @@ const AuctionComponents = () => {
 														<img src="/assets/images/game-play/4.png" alt="" />
 													</div>
 													<div className="contant">
-														<a href="tournaments2.html" className="mybtn2">
+														<Link to="tournaments2.html" className="mybtn2">
 															Chi tiết
-														</a>
+														</Link>
 													</div>
 												</div>
 												<h4>37 People Playing</h4>
 												<ul>
 													<li>
-														<a href="#">
+														<Link to="#">
 															<img src="/assets/images/player/sm1.png" alt="" />
-														</a>
+														</Link>
 													</li>
 													<li>
-														<a href="#">
+														<Link to="#">
 															<img src="/assets/images/player/sm2.png" alt="" />
-														</a>
+														</Link>
 													</li>
 													<li>
-														<a href="#">
+														<Link to="#">
 															<img src="/assets/images/player/sm3.png" alt="" />
-														</a>
+														</Link>
 													</li>
 													<li>
-														<a href="#">
+														<Link to="#">
 															<img src="/assets/images/player/sm4.png" alt="" />
-														</a>
+														</Link>
 													</li>
 													<li>
 														<span>32+</span>
@@ -696,32 +696,32 @@ const AuctionComponents = () => {
 														<img src="/assets/images/game-play/1.png" alt="" />
 													</div>
 													<div className="contant">
-														<a href="tournaments2.html" className="mybtn2">
+														<Link to="tournaments2.html" className="mybtn2">
 															Chi tiết
-														</a>
+														</Link>
 													</div>
 												</div>
 												<h4>37 People Playing</h4>
 												<ul>
 													<li>
-														<a href="#">
+														<Link to="#">
 															<img src="/assets/images/player/sm1.png" alt="" />
-														</a>
+														</Link>
 													</li>
 													<li>
-														<a href="#">
+														<Link to="#">
 															<img src="/assets/images/player/sm2.png" alt="" />
-														</a>
+														</Link>
 													</li>
 													<li>
-														<a href="#">
+														<Link to="#">
 															<img src="/assets/images/player/sm3.png" alt="" />
-														</a>
+														</Link>
 													</li>
 													<li>
-														<a href="#">
+														<Link to="#">
 															<img src="/assets/images/player/sm4.png" alt="" />
-														</a>
+														</Link>
 													</li>
 													<li>
 														<span>32+</span>
@@ -771,32 +771,32 @@ const AuctionComponents = () => {
 														<img src="/assets/images/game-play/2.png" alt="" />
 													</div>
 													<div className="contant">
-														<a href="tournaments2.html" className="mybtn2">
+														<Link to="tournaments2.html" className="mybtn2">
 															Chi tiết
-														</a>
+														</Link>
 													</div>
 												</div>
 												<h4>37 People Playing</h4>
 												<ul>
 													<li>
-														<a href="#">
+														<Link to="#">
 															<img src="/assets/images/player/sm1.png" alt="" />
-														</a>
+														</Link>
 													</li>
 													<li>
-														<a href="#">
+														<Link to="#">
 															<img src="/assets/images/player/sm2.png" alt="" />
-														</a>
+														</Link>
 													</li>
 													<li>
-														<a href="#">
+														<Link to="#">
 															<img src="/assets/images/player/sm3.png" alt="" />
-														</a>
+														</Link>
 													</li>
 													<li>
-														<a href="#">
+														<Link to="#">
 															<img src="/assets/images/player/sm4.png" alt="" />
-														</a>
+														</Link>
 													</li>
 													<li>
 														<span>32+</span>
@@ -846,32 +846,32 @@ const AuctionComponents = () => {
 														<img src="/assets/images/game-play/3.png" alt="" />
 													</div>
 													<div className="contant">
-														<a href="tournaments2.html" className="mybtn2">
+														<Link to="tournaments2.html" className="mybtn2">
 															Chi tiết
-														</a>
+														</Link>
 													</div>
 												</div>
 												<h4>37 People Playing</h4>
 												<ul>
 													<li>
-														<a href="#">
+														<Link to="#">
 															<img src="/assets/images/player/sm1.png" alt="" />
-														</a>
+														</Link>
 													</li>
 													<li>
-														<a href="#">
+														<Link to="#">
 															<img src="/assets/images/player/sm2.png" alt="" />
-														</a>
+														</Link>
 													</li>
 													<li>
-														<a href="#">
+														<Link to="#">
 															<img src="/assets/images/player/sm3.png" alt="" />
-														</a>
+														</Link>
 													</li>
 													<li>
-														<a href="#">
+														<Link to="#">
 															<img src="/assets/images/player/sm4.png" alt="" />
-														</a>
+														</Link>
 													</li>
 													<li>
 														<span>32+</span>
@@ -921,32 +921,32 @@ const AuctionComponents = () => {
 														<img src="/assets/images/game-play/4.png" alt="" />
 													</div>
 													<div className="contant">
-														<a href="tournaments2.html" className="mybtn2">
+														<Link to="tournaments2.html" className="mybtn2">
 															Chi tiết
-														</a>
+														</Link>
 													</div>
 												</div>
 												<h4>37 People Playing</h4>
 												<ul>
 													<li>
-														<a href="#">
+														<Link to="#">
 															<img src="/assets/images/player/sm1.png" alt="" />
-														</a>
+														</Link>
 													</li>
 													<li>
-														<a href="#">
+														<Link to="#">
 															<img src="/assets/images/player/sm2.png" alt="" />
-														</a>
+														</Link>
 													</li>
 													<li>
-														<a href="#">
+														<Link to="#">
 															<img src="/assets/images/player/sm3.png" alt="" />
-														</a>
+														</Link>
 													</li>
 													<li>
-														<a href="#">
+														<Link to="#">
 															<img src="/assets/images/player/sm4.png" alt="" />
-														</a>
+														</Link>
 													</li>
 													<li>
 														<span>32+</span>
@@ -995,9 +995,9 @@ const AuctionComponents = () => {
 				</div>
 				<div className="row">
 					<div className="col-lg-12 text-center">
-						<a href="#" className="mybtn2">
+						<Link to="#" className="mybtn2">
 							View More
-						</a>
+						</Link>
 					</div>
 				</div>
 			</div>

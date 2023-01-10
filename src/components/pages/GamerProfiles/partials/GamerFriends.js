@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 const GamerFriends = () => {
   return (
     <React.Fragment>
@@ -42,9 +43,9 @@ const GamerFriends = () => {
                   <p>Member Since 08 Jan 2021</p>
                 </div>
                 <div className="button-area">
-                  <a href="#" className="mybtn2">
+                  <Link to="/" className="mybtn2">
                     Add Friends
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -68,9 +69,9 @@ const GamerFriends = () => {
                   <p>Member Since 08 Jan 2021</p>
                 </div>
                 <div className="button-area">
-                  <a href="#" className="mybtn2">
+                  <Link to="/" className="mybtn2">
                     Add Friends
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -94,9 +95,9 @@ const GamerFriends = () => {
                   <p>Member Since 08 Jan 2021</p>
                 </div>
                 <div className="button-area">
-                  <a href="#" className="mybtn2">
+                  <Link to="/" className="mybtn2">
                     Add Friends
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -120,9 +121,9 @@ const GamerFriends = () => {
                   <p>Member Since 08 Jan 2021</p>
                 </div>
                 <div className="button-area">
-                  <a href="#" className="mybtn2">
+                  <Link to="/" className="mybtn2">
                     Add Friends
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -146,9 +147,9 @@ const GamerFriends = () => {
                   <p>Member Since 08 Jan 2021</p>
                 </div>
                 <div className="button-area">
-                  <a href="#" className="mybtn2">
+                  <Link to="/" className="mybtn2">
                     Add Friends
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -172,9 +173,9 @@ const GamerFriends = () => {
                   <p>Member Since 08 Jan 2021</p>
                 </div>
                 <div className="button-area">
-                  <a href="#" className="mybtn2">
+                  <Link to="/" className="mybtn2">
                     Add Friends
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -198,9 +199,9 @@ const GamerFriends = () => {
                   <p>Member Since 08 Jan 2021</p>
                 </div>
                 <div className="button-area">
-                  <a href="#" className="mybtn2">
+                  <Link to="/" className="mybtn2">
                     Add Friends
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -224,9 +225,9 @@ const GamerFriends = () => {
                   <p>Member Since 08 Jan 2021</p>
                 </div>
                 <div className="button-area">
-                  <a href="#" className="mybtn2">
+                  <Link to="/" className="mybtn2">
                     Add Friends
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -234,9 +235,9 @@ const GamerFriends = () => {
         </div>
         <div className="row">
           <div className="col-lg-12 text-center">
-            <a href="#" className="mybtn2">
+            <Link to="/" className="mybtn2">
               View More
-            </a>
+            </Link>
           </div>
         </div>
       </div>

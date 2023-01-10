@@ -62,7 +62,6 @@ const LoginModalsComponents = (props) => {
                 <h4 className="title">Welcome to ZSGo</h4>
               </div>
               <div className="form-area">
-                {/* <form action="#" method="POST"> */}
                 <div className="form-group">
                   <input
                     type="email"
@@ -101,7 +100,6 @@ const LoginModalsComponents = (props) => {
                     Đăng nhập
                   </button>
                 </div>
-                {/* </form> */}
               </div>
             </div>
             <div
@@ -115,10 +113,6 @@ const LoginModalsComponents = (props) => {
                   <span>Quà đăng ký</span>
                   <h4>Xe S 7ngày</h4>
                 </span>
-                <h4 className="title">Đăng ký và tận hưởng game</h4>
-                <p className="text">
-                  Điền vào form dưới đây để đăng ký tài khoản và nhận quà
-                </p>
               </div>
               <div className="form-area">
                 <form action="#" method="POST">
@@ -128,7 +122,7 @@ const LoginModalsComponents = (props) => {
                       name="name"
                       className="input-field"
                       id="input-name1"
-                      placeholder="Tài khoản"
+                      placeholder="Họ tên"
                       onChange={(e) =>
                         setRegisterForm({
                           ...registerForm,
@@ -143,7 +137,7 @@ const LoginModalsComponents = (props) => {
                       name="email"
                       className="input-field"
                       id="input-email1"
-                      placeholder="Enter your Email"
+                      placeholder="Email"
                       onChange={(e) =>
                         setRegisterForm({
                           ...registerForm,
@@ -158,7 +152,7 @@ const LoginModalsComponents = (props) => {
                       name="password"
                       className="input-field"
                       id="input-password"
-                      placeholder="Enter your password"
+                      placeholder="Mật khẩu"
                       onChange={(e) =>
                         setRegisterForm({
                           ...registerForm,
@@ -173,11 +167,26 @@ const LoginModalsComponents = (props) => {
                       name="confirmPassword"
                       className="input-field"
                       id="input-con-password"
-                      placeholder="Enter your Confirm Password"
+                      placeholder="Xác nhận mật khẩu"
                       onChange={(e) =>
                         setRegisterForm({
                           ...registerForm,
                           confirmPassword: e.target.value,
+                        })
+                      }
+                    />
+                  </div>
+                  <div className="form-group">
+                    <input
+                      type="file"
+                      id="avatar"
+                      name="avatar"
+                      className="input-field"
+                      placeholder="Ảnh đại diện"
+                      onChange={(e) =>
+                        setRegisterForm({
+                          ...registerForm,
+                          avatar: e.target.files[0],
                         })
                       }
                     />
