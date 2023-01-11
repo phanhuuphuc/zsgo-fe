@@ -1,0 +1,8 @@
+.erorors {
+	color: #bf1650;
+}
+
+.erorors::before {
+	display: inline;
+	content: '⚠ ';
+}

@@ -2,7 +2,7 @@ import React from 'react';
 import Logo from '@/assets/images/logo2.png';
 import userAvartar from '@/assets/images/default-avt.png';
 import { Link } from 'react-router-dom';
-import '../Header/style.css'
+import '../Header/style.css';
 import {
 	HOME_PAGE_PATH,
 	ITEM_DETAILS_PAGE_PATH,
@@ -40,13 +40,19 @@ const Header = () => {
 										</ul>
 										<ul className="top-social-links">
 											<li>
-												<Link href="#">
+												<Link
+													onClick={() =>
+														window.open('https://www.facebook.com/zsgo.net', '_blank')
+													}
+												>
 													<i className="fab fa-facebook-f"></i>
 												</Link>
 											</li>
 											<li>
-												<Link href="#">
-													<i className="fab fa-twitter"></i>
+												<Link
+													onClick={() => window.open('https://discord.gg/tPsh2f47', '_blank')}
+												>
+													<i className="fab fa-discord fa-lg"></i>
 												</Link>
 											</li>
 											<li>
@@ -254,7 +260,11 @@ const Header = () => {
 																</div>
 																<div className="right-area">
 																	<div className="icon">
-																		<img className='avatar' src={userAvartar} alt="" />
+																		<img
+																			className="avatar"
+																			src={userAvartar}
+																			alt=""
+																		/>
 																	</div>
 																	<div className="dp-menu">
 																		<ul className="dp-links">
