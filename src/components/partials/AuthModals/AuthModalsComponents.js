@@ -20,8 +20,10 @@ const LoginModalsComponents = (props) => {
 		reset,
 	} = useForm();
 	const onSubmit = (data) => {
-		reset();
-		props.handleSubmitLogin();
+		console.log(data);
+		setRegisterForm(Object.assign(registerForm, data));
+		props.handleSubmitRegister();
+		// reset();
 	};
 	return (
 		<div className="modal-dialog modal-dialog-centered " role="document">
@@ -238,7 +240,7 @@ const LoginModalsComponents = (props) => {
 											}
 										/>
 									</div> */}
-									<ReCAPTCHA sitekey={process.env.REACT_APP_RECAPTCHAV2_SITE_KEY} />
+									{/* <ReCAPTCHA sitekey={process.env.REACT_APP_RECAPTCHAV2_SITE_KEY} /> */}
 									<div className="form-group">
 										<div className="check-group">
 											<input
@@ -256,7 +258,7 @@ const LoginModalsComponents = (props) => {
 									<div className="form-group">
 										<input
 											type="submit"
-											// value="Đăng ký"
+											value="Đăng ký"
 											className="mybtn2"
 											// onClick={}
 										/>

@@ -17,17 +17,20 @@ const LoginModalContainer = () => {
 	const [registerForm, setRegisterForm] = useState({
 		name: '',
 		email: '',
-		avatar: '',
+		// avatar: '',
 		password: '',
 		confirmPassword: '',
 	});
 
 	const handleSubmitLogin = useCallback(() => {
 		dispatch(login(loginForm.email, loginForm.password))
-			.then(() => {
+			.then((res) => {
+				console.log(res);
 				handleCloseModal();
 			})
-			.catch(() => {});
+			.catch((err) => {
+				console.log(err);
+			});
 	}, [dispatch, loginForm.email, loginForm.password]);
 
 	useEffect(() => {
@@ -47,13 +50,14 @@ const LoginModalContainer = () => {
 	const handleSubmitRegister = (e) => {
 		// e.preventDefault();
 		const formData = new FormData();
-		formData.append('avatar', registerForm.avatar);
+		console.log(registerForm);
+		// formData.append('avatar', registerForm.avatar);
 		formData.append('name', registerForm.name);
 		formData.append('email', registerForm.email);
 		formData.append('password', registerForm.password);
 		formData.append('confirmPassword', registerForm.confirmPassword);
 		dispatch(register(Object.fromEntries(formData)));
-		// console.log(Object.fromEntries(formData));
+		console.log(Object.fromEntries(formData));
 	};
 
 	const handleCloseModal = () => {
