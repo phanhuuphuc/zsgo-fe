@@ -8,6 +8,7 @@ const LoginModalContainer = () => {
 	const btnCloseRef = useRef();
 	const btnSubmitRef = useRef();
 	const { isLoggedIn } = useSelector((state) => state.auth);
+
 	const [loginForm, setLoginForm] = useState({
 		email: '',
 		password: '',

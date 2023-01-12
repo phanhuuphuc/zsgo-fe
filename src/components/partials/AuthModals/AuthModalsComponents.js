@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import './style.css';
+import ReCAPTCHA from 'react-google-recaptcha';
 const LoginModalsComponents = (props) => {
 	const setLoginForm = props.setLoginForm;
 	const loginForm = props.loginForm;
@@ -14,8 +15,12 @@ const LoginModalsComponents = (props) => {
 		register,
 		formState: { errors },
 		handleSubmit,
+		getValues,
+		watch,
+		reset,
 	} = useForm();
 	const onSubmit = (data) => {
+		reset();
 		props.handleSubmitLogin();
 	};
 	return (
@@ -207,9 +212,17 @@ const LoginModalsComponents = (props) => {
 													confirmPassword: e.target.value,
 												})
 											}
+											{...register('confirmPassword', { required: 'Xác nhận mật khẩu' })}
 										/>
+										<p className={errors.confirmPassword ? 'erorors' : ''}>
+											{errors.confirmPassword?.message}
+										</p>
+										{watch('confirmPassword') !== watch('password') &&
+										getValues('confirmPassword') ? (
+											<p className="erorors">Mật khẩu xác nhận chưa đúng</p>
+										) : null}
 									</div>
-									<div className="form-group">
+									{/* <div className="form-group">
 										<input
 											type="file"
 											id="avatar"
@@ -224,7 +237,8 @@ const LoginModalsComponents = (props) => {
 												})
 											}
 										/>
-									</div>
+									</div> */}
+									<ReCAPTCHA sitekey={process.env.REACT_APP_RECAPTCHAV2_SITE_KEY} />
 									<div className="form-group">
 										<div className="check-group">
 											<input
