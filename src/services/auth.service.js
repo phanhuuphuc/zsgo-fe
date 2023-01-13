@@ -4,7 +4,7 @@ import { REQUEST_SUCCESS } from '@/constants/constants';
 const API_URL = 'http://highspeed.test/api/auth/';
 let config = {
 	headers: {
-		'Access-Control-Allow-Origin': '*',
+		'Access-Control-Allow-Origin': 'http://localhost:3000',
 		'Content-Type': 'application/x-www-form-urlencoded',
 		processData: false,
 		contentType: false,
