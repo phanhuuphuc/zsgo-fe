@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { toast } from 'react-toastify';
 import { REQUEST_SUCCESS } from '@/constants/constants';
-const API_URL = 'http://highspeed.test/api/auth/';
+const API_URL = process.env.REACT_APP_SERVER_BASE_URL + 'auth';
 let config = {
 	headers: {
 		'Access-Control-Allow-Origin': '*',
