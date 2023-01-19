@@ -7,8 +7,9 @@ const LoginModalContainer = () => {
 	const dispatch = useDispatch();
 	const btnCloseRef = useRef();
 	const btnSubmitRef = useRef();
+	const recaptchaRef = useRef();
 	const { isLoggedIn } = useSelector((state) => state.auth);
-
+	const [btnDisabled, setBtnDisabled] = useState(true);
 	const [loginForm, setLoginForm] = useState({
 		email: '',
 		password: '',
@@ -18,6 +19,7 @@ const LoginModalContainer = () => {
 		name: '',
 		email: '',
 		// avatar: '',
+		token: '',
 		password: '',
 		confirmPassword: '',
 	});
@@ -47,17 +49,21 @@ const LoginModalContainer = () => {
 
 	console.log(isLoggedIn);
 
-	const handleSubmitRegister = (e) => {
-		// e.preventDefault();
+	const handleSubmitRegister = (token) => {
 		const formData = new FormData();
 		console.log(registerForm);
-		// formData.append('avatar', registerForm.avatar);
+		formData.append('token', token);
 		formData.append('name', registerForm.name);
 		formData.append('email', registerForm.email);
 		formData.append('password', registerForm.password);
 		formData.append('confirmPassword', registerForm.confirmPassword);
 		dispatch(register(Object.fromEntries(formData)));
 		console.log(Object.fromEntries(formData));
+		recaptchaRef.current.reset();
+	};
+
+	const handleVerifyCaptcha = (token) => {
+		setBtnDisabled(false);
 	};
 
 	const handleCloseModal = () => {
@@ -87,7 +93,10 @@ const LoginModalContainer = () => {
 			setLoginForm={setLoginForm}
 			btnCloseRef={btnCloseRef}
 			btnSubmitRef={btnSubmitRef}
+			recaptchaRef={recaptchaRef}
 			loginForm={loginForm}
+			btnDisabled={btnDisabled}
+			handleVerifyCaptcha={handleVerifyCaptcha}
 			setRegisterForm={setRegisterForm}
 			registerForm={registerForm}
 			handleLogOut={handleLogOut}

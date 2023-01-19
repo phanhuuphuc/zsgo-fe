@@ -11,6 +11,9 @@ const LoginModalsComponents = (props) => {
 	const handleCloseModal = props.handleCloseModal;
 	const btnCloseRef = props.btnCloseRef;
 	const btnSubmitRef = props.btnSubmitRef;
+	const recaptchaRef = props.recaptchaRef;
+	const btnDisabled = props.btnDisabled;
+	const handleVerifyCaptcha = props.handleVerifyCaptcha;
 	const {
 		register,
 		formState: { errors },
@@ -21,8 +24,9 @@ const LoginModalsComponents = (props) => {
 	} = useForm();
 	const onSubmit = (data) => {
 		console.log(data);
+		const recaptchaValue = recaptchaRef.current.getValue();
 		setRegisterForm(Object.assign(registerForm, data));
-		props.handleSubmitRegister();
+		props.handleSubmitRegister(recaptchaValue);
 		// reset();
 	};
 	return (
@@ -240,32 +244,19 @@ const LoginModalsComponents = (props) => {
 											}
 										/>
 									</div> */}
-									{/* <ReCAPTCHA sitekey={process.env.REACT_APP_RECAPTCHAV2_SITE_KEY} /> */}
-									<div className="form-group">
-										<div className="check-group">
-											<input
-												type="checkbox"
-												className="check-box-field"
-												id="input-terms"
-												defaultChecked
-											/>
-											<label htmlFor="input-terms">
-												I agree with <Link href="#">terms and Conditions</Link> and{' '}
-												<Link href="#">privacy policy</Link>
-											</label>
-										</div>
-									</div>
+									<ReCAPTCHA
+										sitekey={process.env.REACT_APP_RECAPTCHAV2_SITE_KEY_LOCAL}
+										onChange={handleVerifyCaptcha}
+										ref={recaptchaRef}
+									/>
+
 									<div className="form-group">
 										<input
+											disabled={btnDisabled}
 											type="submit"
 											value="Đăng ký"
-											className="mybtn2"
-											// onClick={}
+											className={btnDisabled ? 'mybtn2 disabled' : 'mybtn2'}
 										/>
-
-										{/* <button type="submit" >
-											Đăng ký
-										</button> */}
 									</div>
 								</form>
 							</div>

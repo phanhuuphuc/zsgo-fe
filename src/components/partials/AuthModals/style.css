@@ -6,3 +6,6 @@
 	display: inline;
 	content: '⚠ ';
 }
+.disabled {
+	box-shadow: inset 0px 0px 10px 7px #5d5f60;
+}
