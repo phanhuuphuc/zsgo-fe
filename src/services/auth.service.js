@@ -1,10 +1,9 @@
 import axios from 'axios';
 import { toast } from 'react-toastify';
-import { REQUEST_SUCCESS } from '@/constants/constants';
-const API_URL = process.env.REACT_APP_SERVER_BASE_URL + 'auth';
+const API_URL = process.env.REACT_APP_SERVER_BASE_URL + 'api/auth/';
 let config = {
 	headers: {
-		'Access-Control-Allow-Origin': 'http://localhost:3000',
+		'Access-Control-Allow-Origin': process.env.REACT_APP_SERVER_BASE_URL,
 		'Content-Type': 'application/x-www-form-urlencoded',
 		processData: false,
 		contentType: false,
@@ -15,10 +14,10 @@ const register = (formData) => {
 	return axios
 		.post(API_URL + 'register', formData, config)
 		.then((response) => {
-			console.log(response);
+			return response.data;
 		})
 		.catch((error) => {
-			console.log(error);
+			return error.response.data;
 		});
 };
 
@@ -29,22 +28,18 @@ const login = (email, password) => {
 			password,
 		})
 		.then((response) => {
-			if (
-				response.data.data.accessToken &&
-				response.data.status === true &&
-				response.data.message === REQUEST_SUCCESS
-			) {
-				return response.data;
-			}
+			return response.data;
 		})
 		.catch((error) => {
+			toast.error('Sai thông tin rồi, thử lại nhé!');
 			return error.response.data;
 		});
 };
 
 const logout = () => {
+	const user = JSON.parse(localStorage.getItem('user'));
 	localStorage.removeItem('user');
-	toast.success('🦄 Logout successfully!');
+	toast.dark(`👋 Hẹn gặp lại!  ${user.name}`);
 };
 
 const exportedObject = {

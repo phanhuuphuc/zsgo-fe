@@ -8,7 +8,6 @@ const LoginModalContainer = () => {
 	const btnCloseRef = useRef();
 	const btnSubmitRef = useRef();
 	const recaptchaRef = useRef();
-	const { isLoggedIn } = useSelector((state) => state.auth);
 	const [btnDisabled, setBtnDisabled] = useState(true);
 	const [loginForm, setLoginForm] = useState({
 		email: '',
@@ -27,12 +26,9 @@ const LoginModalContainer = () => {
 	const handleSubmitLogin = useCallback(() => {
 		dispatch(login(loginForm.email, loginForm.password))
 			.then((res) => {
-				console.log(res);
 				handleCloseModal();
 			})
-			.catch((err) => {
-				console.log(err);
-			});
+			.catch((err) => {});
 	}, [dispatch, loginForm.email, loginForm.password]);
 
 	useEffect(() => {
@@ -47,18 +43,21 @@ const LoginModalContainer = () => {
 		};
 	}, [handleSubmitLogin]);
 
-	console.log(isLoggedIn);
-
 	const handleSubmitRegister = (token) => {
 		const formData = new FormData();
-		console.log(registerForm);
 		formData.append('token', token);
 		formData.append('name', registerForm.name);
 		formData.append('email', registerForm.email);
 		formData.append('password', registerForm.password);
 		formData.append('confirmPassword', registerForm.confirmPassword);
-		dispatch(register(Object.fromEntries(formData)));
-		console.log(Object.fromEntries(formData));
+		dispatch(register(Object.fromEntries(formData)))
+			.then((res) => {
+				console.log(res);
+				btnCloseRef.current.click();
+			})
+			.catch((err) => {
+				console.log(err);
+			});
 		recaptchaRef.current.reset();
 	};
 
@@ -70,19 +69,6 @@ const LoginModalContainer = () => {
 		btnCloseRef.current.click();
 	};
 
-	const handleClearForm = () => {
-		setLoginForm({
-			email: '',
-			password: '',
-		});
-		setRegisterForm({
-			name: '',
-			email: '',
-			avatar: '',
-			password: '',
-			confirmPassword: '',
-		});
-	};
 	const handleLogOut = () => {
 		console.log('Log out');
 	};

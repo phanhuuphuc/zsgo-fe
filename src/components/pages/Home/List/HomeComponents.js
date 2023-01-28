@@ -37,17 +37,17 @@ const HomeComponents = () => {
 					<div className="row">
 						<div className="col-lg-4 col-md-6">
 							<div className="left-info">
-								<h5>Try to check out our next </h5>
-								<h3>Tournaments!</h3>
+								<h5>Phần thưởng hấp dẫn </h5>
+								<h3>Giải Đấu!</h3>
 								<Link href="#" className="mybtn1">
-									Join Us
+									Coming soon
 								</Link>
 							</div>
 						</div>
 						<div className="col-lg-4 col-md-6">
 							<div className="prize-pool">
-								<h6>Prize pool</h6>
-								<h3>$800</h3>
+								<h6>Giải thưởng</h6>
+								<h3>1500 Gcoins</h3>
 								<div className="timecounter">
 									<i className="far fa-clock"></i>
 									<div data-countdown="2021/12/15"></div>
@@ -56,9 +56,9 @@ const HomeComponents = () => {
 								<img src="./assets/images/s-box.png" alt="" />
 							</div>
 						</div>
-						<div className="col-lg-4 col-md-12">
+						{/* <div className="col-lg-4 col-md-12">
 							<div className="l-winner-slider-wrapper">
-								<h4>LAST WINNERS</h4>
+								<h4>Tay đua chiến thắng</h4>
 								<div className="l-winner-slider">
 									<div className="s-item">
 										<div className="img">
@@ -86,20 +86,25 @@ const HomeComponents = () => {
 									</div>
 								</div>
 							</div>
-						</div>
+						</div> */}
 					</div>
 				</div>
 			</section>
 			<section className="game-play-section">
-				<img className="left-img" src="./assets/images/game-play/left-img.png" alt="" />
-				<img className="right-img" src="./assets/images/game-play/right-img.png" alt="" />
+				<img
+					className="left-img"
+					style={{ width: 100 + '%' }}
+					src="./assets/images/game-play/left-img.png"
+					alt=""
+				/>
+				{/* <img className="right-img" src="./assets/images/game-play/right-img.png" alt="" /> */}
 				<div className="container">
 					<div className="row">
 						<div className="col-lg-12">
 							<div className="section-heading">
-								<h5 className="subtitle">The Games You Love</h5>
+								<h5 className="subtitle">Chinh Phục Tốc Độ</h5>
 								<h2 className="title ">PLAY AND WIN</h2>
-								<h6 className="text">Where skill is rewarded.Join millions of players worldwide!</h6>
+								<h6 className="text">Hoàn thành khiêu chiến các bản đồ để nhận Gcoins!</h6>
 							</div>
 						</div>
 					</div>
@@ -111,10 +116,10 @@ const HomeComponents = () => {
 								</div>
 								<div className="contant">
 									<Link href="#" className="mybtn1">
-										Play
+										Sắp mở
 									</Link>
-									<h4>37 People Playing</h4>
-									<ul>
+									<h4>Chưa có người tham gia</h4>
+									{/* <ul>
 										<li>
 											<Link href="#">
 												<img src="./assets/images/player/sm1.png" alt="" />
@@ -138,7 +143,7 @@ const HomeComponents = () => {
 										<li>
 											<span>32+</span>
 										</li>
-									</ul>
+									</ul> */}
 								</div>
 							</div>
 						</div>
@@ -149,10 +154,10 @@ const HomeComponents = () => {
 								</div>
 								<div className="contant">
 									<Link href="#" className="mybtn1">
-										Play
+										Sắp mở
 									</Link>
-									<h4>37 People Playing</h4>
-									<ul>
+									<h4>Chưa có người tham gia</h4>
+									{/* <ul>
 										<li>
 											<Link href="#">
 												<img src="./assets/images/player/sm1.png" alt="" />
@@ -176,7 +181,7 @@ const HomeComponents = () => {
 										<li>
 											<span>32+</span>
 										</li>
-									</ul>
+									</ul> */}
 								</div>
 							</div>
 						</div>
@@ -187,10 +192,10 @@ const HomeComponents = () => {
 								</div>
 								<div className="contant">
 									<Link href="#" className="mybtn1">
-										Play
+										Sắp mở
 									</Link>
-									<h4>37 People Playing</h4>
-									<ul>
+									<h4>Chưa có người tham gia</h4>
+									{/* <ul>
 										<li>
 											<Link href="#">
 												<img src="./assets/images/player/sm1.png" alt="" />
@@ -214,7 +219,7 @@ const HomeComponents = () => {
 										<li>
 											<span>32+</span>
 										</li>
-									</ul>
+									</ul> */}
 								</div>
 							</div>
 						</div>
@@ -225,10 +230,10 @@ const HomeComponents = () => {
 								</div>
 								<div className="contant">
 									<Link href="#" className="mybtn1">
-										Play
+										Sắp mở
 									</Link>
-									<h4>37 People Playing</h4>
-									<ul>
+									<h4>Chưa có người tham gia</h4>
+									{/* <ul>
 										<li>
 											<Link href="#">
 												<img src="./assets/images/player/sm1.png" alt="" />
@@ -252,7 +257,7 @@ const HomeComponents = () => {
 										<li>
 											<span>32+</span>
 										</li>
-									</ul>
+									</ul> */}
 								</div>
 							</div>
 						</div>
@@ -260,7 +265,7 @@ const HomeComponents = () => {
 					<div className="row">
 						<div className="col-lg-12 text-center">
 							<Link href="#" className="b-all-btn">
-								Browser All <img src="./assets/images/arrow.png" alt="" />
+								Chờ bọn mình nhé!
 							</Link>
 						</div>
 					</div>
@@ -271,9 +276,9 @@ const HomeComponents = () => {
 					<div className="row">
 						<div className="col-lg-12">
 							<div className="section-heading">
-								<h5 className="subtitle">True Wins closer than they seem</h5>
-								<h2 className="title ">Latest Activities</h2>
-								<h6 className="text">Where skill is rewarded.Join millions of players worldwide!</h6>
+								<h5 className="subtitle">Cuộc Đua Kỹ Năng</h5>
+								<h2 className="title ">BẢNG XẾP HẠNG</h2>
+								<h6 className="text">Người chơi có số cuộc đua nhiều nhất!</h6>
 							</div>
 						</div>
 					</div>
@@ -281,7 +286,7 @@ const HomeComponents = () => {
 						<div className="col-lg-12">
 							<ul className="nav  mb-3" role="tablist">
 								<li className="nav-item">
-									<Link
+									<a
 										className="nav-link active"
 										id="pills-home-tab"
 										data-toggle="pill"
@@ -290,11 +295,11 @@ const HomeComponents = () => {
 										aria-controls="pills-home"
 										aria-selected="true"
 									>
-										Leaderboard
-									</Link>
+										TOP TRẬN ĐUA
+									</a>
 								</li>
 								<li className="nav-item">
-									<Link
+									<a
 										className="nav-link"
 										id="pills-profile-tab"
 										data-toggle="pill"
@@ -303,8 +308,8 @@ const HomeComponents = () => {
 										aria-controls="pills-profile"
 										aria-selected="false"
 									>
-										changellenge
-									</Link>
+										TOP TRẬN WIN
+									</a>
 								</li>
 							</ul>
 							<div className="tab-content l-a-nav" id="pills-tabContent">
@@ -319,18 +324,18 @@ const HomeComponents = () => {
 											<div className="left-content">
 												<div className="heading-area">
 													<img src="./assets/images/arcive/i2.png" alt="" />
-													<h6>Latest Changellenge</h6>
-													<h3>Top Players</h3>
+													<h6>Lần cập nhật gần nhất</h6>
+													<h3>Top số trận đua</h3>
 												</div>
 												<ul>
 													<li>
 														<div className="info-box">
 															<img src="./assets/images/arcive/i3.png" alt="" />
 															<div className="content">
-																<h4>Levels & Rewards</h4>
+																<h4>Cấp độ & phần thưởng</h4>
 																<p>
-																	Join a grand adventure of 7 levels and unlimited
-																	milestone rewards
+																	Tham gia một cuộc đua lớn gồm nhiều cấp độ và không
+																	giới hạn phần thưởng cột mốc
 																</p>
 															</div>
 														</div>
@@ -339,11 +344,8 @@ const HomeComponents = () => {
 														<div className="info-box">
 															<img src="./assets/images/arcive/i4.png" alt="" />
 															<div className="content">
-																<h4>Fast</h4>
-																<p>
-																	Join a grand adventure of 7 levels and unlimited
-																	milestone rewards
-																</p>
+																<h4>Hoàn thành nhanh nhất</h4>
+																<p>Hoàn thành các bản đồ nhanh nhất</p>
 															</div>
 														</div>
 													</li>
@@ -351,11 +353,8 @@ const HomeComponents = () => {
 														<div className="info-box">
 															<img src="./assets/images/arcive/i5.png" alt="" />
 															<div className="content">
-																<h4>Fair</h4>
-																<p>
-																	Join a grand adventure of 7 levels and unlimited
-																	milestone rewards
-																</p>
+																<h4>Thưởng</h4>
+																<p>Gcoins - coming soon</p>
 															</div>
 														</div>
 													</li>
@@ -373,7 +372,7 @@ const HomeComponents = () => {
 																	<img src="./assets/images/arcive/m1.png" alt="" />
 																</div>
 																<div className="right2">
-																	<h4>Lee Miller</h4>
+																	<h4>Admin test</h4>
 																	<div className="stars">
 																		<i className="fas fa-star"></i>
 																		<i className="fas fa-star"></i>
@@ -386,7 +385,7 @@ const HomeComponents = () => {
 														</div>
 														<div className="right">
 															<img src="assets/images/arcive/mony.png" alt="" />
-															<h6>_ 25.8772200 BTC</h6>
+															<h6>2000 Gcoins</h6>
 														</div>
 													</div>
 													<div className="s-a-b">
@@ -397,7 +396,7 @@ const HomeComponents = () => {
 																	<img src="./assets/images/arcive/m2.png" alt="" />
 																</div>
 																<div className="right2">
-																	<h4>John Ray</h4>
+																	<h4>Admin test 2</h4>
 																	<div className="stars">
 																		<i className="fas fa-star"></i>
 																		<i className="fas fa-star"></i>
@@ -410,7 +409,7 @@ const HomeComponents = () => {
 														</div>
 														<div className="right">
 															<img src="assets/images/arcive/mony.png" alt="" />
-															<h6>+ 25.8772200 BTC</h6>
+															<h6>1000 Gcoins</h6>
 														</div>
 													</div>
 													<div className="s-a-b">
@@ -421,7 +420,7 @@ const HomeComponents = () => {
 																	<img src="./assets/images/arcive/m3.png" alt="" />
 																</div>
 																<div className="right2">
-																	<h4>Gilbert Ruiz</h4>
+																	<h4>Admin test 3</h4>
 																	<div className="stars">
 																		<i className="fas fa-star"></i>
 																		<i className="fas fa-star"></i>
@@ -434,7 +433,7 @@ const HomeComponents = () => {
 														</div>
 														<div className="right">
 															<img src="./assets/images/arcive/mony.png" alt="" />
-															<h6>25.8772200 BTC</h6>
+															<h6>500 Gcoins</h6>
 														</div>
 													</div>
 													<div className="s-a-b">
@@ -445,7 +444,7 @@ const HomeComponents = () => {
 																	<img src="./assets/images/arcive/m4.png" alt="" />
 																</div>
 																<div className="right2">
-																	<h4>Lee Miller</h4>
+																	<h4>Admin test 4</h4>
 																	<div className="stars">
 																		<i className="fas fa-star"></i>
 																		<i className="fas fa-star"></i>
@@ -458,7 +457,7 @@ const HomeComponents = () => {
 														</div>
 														<div className="right">
 															<img src="./assets/images/arcive/mony.png" alt="" />
-															<h6>_ 25.8772200 BTC</h6>
+															<h6>200 Gcoins</h6>
 														</div>
 													</div>
 													<div className="s-a-b">
@@ -469,7 +468,7 @@ const HomeComponents = () => {
 																	<img src="./assets/images/arcive/m5.png" alt="" />
 																</div>
 																<div className="right2">
-																	<h4>Erik Adams</h4>
+																	<h4>Admin</h4>
 																	<div className="stars">
 																		<i className="fas fa-star"></i>
 																		<i className="fas fa-star"></i>
@@ -482,7 +481,7 @@ const HomeComponents = () => {
 														</div>
 														<div className="right">
 															<img src="./assets/images/arcive/mony.png" alt="" />
-															<h6>25.8772200 BTC</h6>
+															<h6>100 Gcoins</h6>
 														</div>
 													</div>
 													<div className="s-a-b">
@@ -493,7 +492,7 @@ const HomeComponents = () => {
 																	<img src="./assets/images/arcive/m6.png" alt="" />
 																</div>
 																<div className="right2">
-																	<h4>Gina Mills</h4>
+																	<h4>test</h4>
 																	<div className="stars">
 																		<i className="fas fa-star"></i>
 																		<i className="fas fa-star"></i>
@@ -506,7 +505,7 @@ const HomeComponents = () => {
 														</div>
 														<div className="right">
 															<img src="./assets/images/arcive/mony.png" alt="" />
-															<h6>+ 25.8772200 BTC</h6>
+															<h6>50 Gcoins</h6>
 														</div>
 													</div>
 												</div>
@@ -525,19 +524,16 @@ const HomeComponents = () => {
 											<div className="left-content">
 												<div className="heading-area">
 													<img src="./assets/images/arcive/i2.png" alt="" />
-													<h6>Latest Changellenge</h6>
-													<h3>Top Players</h3>
+													<h6>Lần cập nhật gần nhất</h6>
+													<h3>Top trận thắng</h3>
 												</div>
 												<ul>
 													<li>
 														<div className="info-box">
 															<img src="./assets/images/arcive/i3.png" alt="" />
 															<div className="content">
-																<h4>Levels & Rewards</h4>
-																<p>
-																	Join a grand adventure of 7 levels and unlimited
-																	milestone rewards
-																</p>
+																<h4>Cấp độ & phần thưởng</h4>
+																<p>Có tổng số trận đua thắng nhiều nhất</p>
 															</div>
 														</div>
 													</li>
@@ -545,11 +541,8 @@ const HomeComponents = () => {
 														<div className="info-box">
 															<img src="./assets/images/arcive/i4.png" alt="" />
 															<div className="content">
-																<h4>Fast</h4>
-																<p>
-																	Join a grand adventure of 7 levels and unlimited
-																	milestone rewards
-																</p>
+																<h4>Thắng nhiều nhất</h4>
+																<p>Hoàn thành các bản đồ nhanh nhất</p>
 															</div>
 														</div>
 													</li>
@@ -557,11 +550,8 @@ const HomeComponents = () => {
 														<div className="info-box">
 															<img src="./assets/images/arcive/i5.png" alt="" />
 															<div className="content">
-																<h4>Fair</h4>
-																<p>
-																	Join a grand adventure of 7 levels and unlimited
-																	milestone rewards
-																</p>
+																<h4>Thưởng</h4>
+																<p>Gcoins - coming soon</p>
 															</div>
 														</div>
 													</li>
@@ -579,7 +569,7 @@ const HomeComponents = () => {
 																	<img src="./assets/images/arcive/m1.png" alt="" />
 																</div>
 																<div className="right2">
-																	<h4>Lee Miller</h4>
+																	<h4>Admin test</h4>
 																	<div className="stars">
 																		<i className="fas fa-star"></i>
 																		<i className="fas fa-star"></i>
@@ -591,8 +581,8 @@ const HomeComponents = () => {
 															</div>
 														</div>
 														<div className="right">
-															<img src="./assets/images/arcive/mony.png" alt="" />
-															<h6>_ 25.8772200 BTC</h6>
+															<img src="assets/images/arcive/mony.png" alt="" />
+															<h6>2000 Gcoins</h6>
 														</div>
 													</div>
 													<div className="s-a-b">
@@ -603,7 +593,7 @@ const HomeComponents = () => {
 																	<img src="./assets/images/arcive/m2.png" alt="" />
 																</div>
 																<div className="right2">
-																	<h4>John Ray</h4>
+																	<h4>Admin test 2</h4>
 																	<div className="stars">
 																		<i className="fas fa-star"></i>
 																		<i className="fas fa-star"></i>
@@ -615,8 +605,8 @@ const HomeComponents = () => {
 															</div>
 														</div>
 														<div className="right">
-															<img src="./assets/images/arcive/mony.png" alt="" />
-															<h6>+ 25.8772200 BTC</h6>
+															<img src="assets/images/arcive/mony.png" alt="" />
+															<h6>1000 Gcoins</h6>
 														</div>
 													</div>
 													<div className="s-a-b">
@@ -627,7 +617,7 @@ const HomeComponents = () => {
 																	<img src="./assets/images/arcive/m3.png" alt="" />
 																</div>
 																<div className="right2">
-																	<h4>Gilbert Ruiz</h4>
+																	<h4>Admin test 3</h4>
 																	<div className="stars">
 																		<i className="fas fa-star"></i>
 																		<i className="fas fa-star"></i>
@@ -640,7 +630,7 @@ const HomeComponents = () => {
 														</div>
 														<div className="right">
 															<img src="./assets/images/arcive/mony.png" alt="" />
-															<h6>25.8772200 BTC</h6>
+															<h6>500 Gcoins</h6>
 														</div>
 													</div>
 													<div className="s-a-b">
@@ -651,7 +641,7 @@ const HomeComponents = () => {
 																	<img src="./assets/images/arcive/m4.png" alt="" />
 																</div>
 																<div className="right2">
-																	<h4>Lee Miller</h4>
+																	<h4>Admin test 4</h4>
 																	<div className="stars">
 																		<i className="fas fa-star"></i>
 																		<i className="fas fa-star"></i>
@@ -664,7 +654,7 @@ const HomeComponents = () => {
 														</div>
 														<div className="right">
 															<img src="./assets/images/arcive/mony.png" alt="" />
-															<h6>_ 25.8772200 BTC</h6>
+															<h6>200 Gcoins</h6>
 														</div>
 													</div>
 													<div className="s-a-b">
@@ -675,31 +665,7 @@ const HomeComponents = () => {
 																	<img src="./assets/images/arcive/m5.png" alt="" />
 																</div>
 																<div className="right2">
-																	<h4>Erik Adams</h4>
-																	<div className="stars">
-																		<i className="fas fa-star"></i>
-																		<i className="fas fa-star"></i>
-																		<i className="fas fa-star"></i>
-																		<i className="fas fa-star"></i>
-																		<i className="fas fa-star-half-alt"></i>
-																	</div>
-																</div>
-															</div>
-														</div>
-														<div className="right">
-															<img src="./ssets/images/arcive/mony.pnga" alt="" />
-															<h6>25.8772200 BTC</h6>
-														</div>
-													</div>
-													<div className="s-a-b">
-														<div className="left">
-															<img src="./assets/images/arcive/sa9.png" alt="" />
-															<div className="content">
-																<div className="left2">
-																	<img src="./assets/images/arcive/m6.png" alt="" />
-																</div>
-																<div className="right2">
-																	<h4>Gina Mills</h4>
+																	<h4>Admin</h4>
 																	<div className="stars">
 																		<i className="fas fa-star"></i>
 																		<i className="fas fa-star"></i>
@@ -712,7 +678,31 @@ const HomeComponents = () => {
 														</div>
 														<div className="right">
 															<img src="./assets/images/arcive/mony.png" alt="" />
-															<h6>+ 25.8772200 BTC</h6>
+															<h6>100 Gcoins</h6>
+														</div>
+													</div>
+													<div className="s-a-b">
+														<div className="left">
+															<img src="./assets/images/arcive/sa9.png" alt="" />
+															<div className="content">
+																<div className="left2">
+																	<img src="./assets/images/arcive/m6.png" alt="" />
+																</div>
+																<div className="right2">
+																	<h4>test</h4>
+																	<div className="stars">
+																		<i className="fas fa-star"></i>
+																		<i className="fas fa-star"></i>
+																		<i className="fas fa-star"></i>
+																		<i className="fas fa-star"></i>
+																		<i className="fas fa-star-half-alt"></i>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div className="right">
+															<img src="./assets/images/arcive/mony.png" alt="" />
+															<h6>50 Gcoins</h6>
 														</div>
 													</div>
 												</div>
@@ -725,7 +715,7 @@ const HomeComponents = () => {
 					</div>
 				</div>
 			</section>
-			<section className="ex-lottery ex-lottery2">
+			{/* <section className="ex-lottery ex-lottery2">
 				<div className="container">
 					<div className="row">
 						<div className="col-lg-12">
@@ -875,8 +865,8 @@ const HomeComponents = () => {
 						</div>
 					</div>
 				</div>
-			</section>
-			<section className="recent-winners">
+			</section> */}
+			{/* <section className="recent-winners">
 				<div className="container">
 					<div className="row">
 						<div className="col-lg-12">
@@ -958,7 +948,7 @@ const HomeComponents = () => {
 						</div>
 					</div>
 				</div>
-			</section>
+			</section> */}
 			<section className="join_us join_us2 join_us3">
 				<img className="l-image" src="./assets/images/joinus_left_img.png" alt="" />
 				<img className="r-image" src="./assets/images/joinus-bg2.png" alt="" />
@@ -966,11 +956,11 @@ const HomeComponents = () => {
 					<div className="row justify-content-end">
 						<div className="col-xl-7">
 							<div className="section-heading content-left">
-								<h5 className="subtitle">Every day lots of wins</h5>
-								<h2 className="title ">Be One of Them</h2>
+								<h5 className="subtitle">ZSGo - Cuộc Đua Kỹ Năng</h5>
+								<h2 className="title ">chơi là thích</h2>
 								<h6 className="text">
-									Get started in less than 5 min - no credit card required.Gain early access to Jugaro
-									and experience crypto like never before.
+									Đứa con tinh thần của một cựu game thủ, đừng ngại đăng ký trải nghiệm bạn nhé, vì nó
+									miễn phí !.
 								</h6>
 								<Link href="#" className="mybtn1">
 									Join US
@@ -980,7 +970,7 @@ const HomeComponents = () => {
 					</div>
 				</div>
 			</section>
-			<div className="subscribe-area subscribe-area2">
+			{/* <div className="subscribe-area subscribe-area2">
 				<div className="container">
 					<div className="row">
 						<div className="col-lg-12">
@@ -1008,7 +998,7 @@ const HomeComponents = () => {
 						</div>
 					</div>
 				</div>
-			</div>
+			</div> */}
 			<div
 				className="modal fade"
 				id="usernotification"

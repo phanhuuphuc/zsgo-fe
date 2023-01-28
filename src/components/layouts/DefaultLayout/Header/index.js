@@ -1,7 +1,7 @@
 import React from 'react';
 import Logo from '@/assets/images/logo2.png';
-import userAvartar from '@/assets/images/default-avt.png';
-import { Link } from 'react-router-dom';
+import userAvartar from '@/assets/images/default-avt.gif';
+import { Link, Navigate } from 'react-router-dom';
 import '../Header/style.css';
 import {
 	HOME_PAGE_PATH,
@@ -18,8 +18,15 @@ import { useDispatch, useSelector } from 'react-redux';
 import { logout } from '@/redux/actions/auth';
 // const cx = classNameNames.bind(styles);
 const Header = () => {
-	const { isLoggedIn } = useSelector((state) => state.auth);
 	const dispatch = useDispatch();
+
+	const { isLoggedIn } = useSelector((state) => state.auth);
+	const { user: currentUser } = useSelector((state) => state.auth);
+	if (isLoggedIn && !currentUser) {
+		// return <Navigate to="/login" />;
+	} else {
+		console.log(currentUser);
+	}
 
 	return (
 		<React.Fragment>
@@ -201,12 +208,12 @@ const Header = () => {
 																Điểm danh
 															</Link>
 														</li>
-														<li>
+														{/* <li>
 															<Link className="dropdown-item" to={HELP_PAGE_PATH.path}>
 																{' '}
 																<i className="fa fa-angle-double-right"></i>Help
 															</Link>
-														</li>
+														</li> */}
 													</ul>
 												</li>
 												{!isLoggedIn && (
@@ -230,7 +237,7 @@ const Header = () => {
 																	<div className="number">
 																		<img src="assets/images/crypto/i1.png" alt="" />{' '}
 																		<p>
-																			200 <span>Gcoins</span>
+																			0 <span>Gcoins</span>
 																		</p>
 																	</div>
 																	<ul className="dp-links">
@@ -266,6 +273,7 @@ const Header = () => {
 																			alt=""
 																		/>
 																	</div>
+
 																	<div className="dp-menu">
 																		<ul className="dp-links">
 																			<li>

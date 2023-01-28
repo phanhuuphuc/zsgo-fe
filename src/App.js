@@ -20,10 +20,10 @@ function App() {
 								exact={route.exact}
 								element={
 									<Layout>
-										{route.path != HOME_PAGE_PATH.path &&
+										{/* {route.path != HOME_PAGE_PATH.path &&
 										route.path != DAILY_CLAIM_PAGE_PATH.path ? (
 											<Breadcrumbs currentPage={route.path} />
-										) : null}
+										) : null} */}
 										<Page />
 									</Layout>
 								}

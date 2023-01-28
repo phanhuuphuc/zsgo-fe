@@ -43,19 +43,29 @@ function Footer() {
 						<div className="footer-menu">
 							<ul>
 								<li>
-									<a href="#">About</a>
+									<Link onClick={() => window.open('https://www.facebook.com/zsgo.net', '_blank')}>
+										<i className="fab fa-facebook-f"></i>
+									</Link>
 								</li>
 								<li>
-									<a href="#">FAQ</a>
+									<Link onClick={() => window.open('https://discord.gg/tPsh2f47', '_blank')}>
+										<i className="fab fa-discord fa-lg"></i>
+									</Link>
 								</li>
 								<li>
-									<a href="#">Contact</a>
+									<Link href="#">
+										<i className="fab fa-pinterest-p"></i>
+									</Link>
 								</li>
 								<li>
-									<a href="#">Terms of Service</a>
+									<Link href="#">
+										<i className="fab fa-linkedin-in"></i>
+									</Link>
 								</li>
 								<li>
-									<a href="#">Privacy</a>
+									<Link to="/#">
+										<i className="fab fa-instagram"></i>
+									</Link>
 								</li>
 							</ul>
 						</div>
@@ -66,7 +76,7 @@ function Footer() {
 				<div className="container">
 					<div className="row">
 						<div className="col-lg-12">
-							<p>Copyright © 2021.All Rights Reserved By Jugaro</p>
+							<p>Copyright © 2023. All Rights Reserved By ZSGo</p>
 						</div>
 					</div>
 				</div>

@@ -9,3 +9,9 @@
 .disabled {
 	box-shadow: inset 0px 0px 10px 7px #5d5f60;
 }
+.g-recaptcha {
+	transform: scale(0.77);
+	-webkit-transform: scale(0.77);
+	transform-origin: 0 0;
+	-webkit-transform-origin: 0 0;
+}

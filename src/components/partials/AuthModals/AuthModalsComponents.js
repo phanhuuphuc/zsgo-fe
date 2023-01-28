@@ -23,7 +23,6 @@ const LoginModalsComponents = (props) => {
 		reset,
 	} = useForm();
 	const onSubmit = (data) => {
-		console.log(data);
 		const recaptchaValue = recaptchaRef.current.getValue();
 		setRegisterForm(Object.assign(registerForm, data));
 		props.handleSubmitRegister(recaptchaValue);
@@ -244,12 +243,14 @@ const LoginModalsComponents = (props) => {
 											}
 										/>
 									</div> */}
-									<ReCAPTCHA
-										sitekey={process.env.REACT_APP_RECAPTCHAV2_SITE_KEY_LOCAL}
-										onChange={handleVerifyCaptcha}
-										ref={recaptchaRef}
-									/>
-
+									<div className="form-group">
+										<ReCAPTCHA
+											data-size="compact"
+											sitekey={process.env.REACT_APP_RECAPTCHAV2_SITE_KEY_LOCAL}
+											onChange={handleVerifyCaptcha}
+											ref={recaptchaRef}
+										/>
+									</div>
 									<div className="form-group">
 										<input
 											disabled={btnDisabled}
